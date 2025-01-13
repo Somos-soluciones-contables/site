@@ -1,0 +1,60 @@
+/* Estilos de las secciones */
+section {
+    color: #2e5790;
+    margin: 0; /* Eliminar margen por defecto en las secciones */
+}
+.section2 h3 {
+    font-weight: 400;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.section1, .section2, .section3, .contact {
+    padding: 50px 20px; /* Padding superior y lateral */
+    text-align: center;
+    background-color: #ffffff;
+}
+.section1 {
+    background-image: url(../public/wave.svg);
+    background-size: cover;
+    /*background-position: center; */
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.section2 {
+    background-image: url(../public/wave.svg);
+    background-size: cover;
+    /*background-position: center; */
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.section3 {
+    background-image: url(../public/wave2.svg);
+    /* background-size: cover; */
+    /*background-position: center; */
+    color: white;
+    background-position: top;
+    background-color: #2E5790;
+    background-repeat: no-repeat;
+}
+
+
+.section1 h1 {
+    margin-bottom: 5%;
+    text-align: right;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+
+.section3 h1 {
+    margin-bottom: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: right;
+    font-weight: 300;
+    color: #2E5790;
+    font-size: 50px;
+}
