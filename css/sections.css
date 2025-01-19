@@ -13,6 +13,7 @@ section {
 }
 
 .section1 {
+    background-color: #436fadc7;
     background-image: url(../public/wave.svg);
     background-size: cover;
     /*background-position: center; */
@@ -43,6 +44,7 @@ section {
     text-align: right;
     margin-right: 10%;
     margin-left: 10%;
+    color: white;
 }
 
 .section2 h3 {
