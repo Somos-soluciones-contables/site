@@ -2,3 +2,49 @@
     margin-left: 10%;
     width: 100px;
 }
+
+@media (max-width: 1200px) {
+    .menu a {
+        width: 15%;
+    }
+}      
+
+@media (min-width: 901px) {
+    .menu {
+        display: flex; 
+    }
+
+    .toggle {
+        display: none;
+    }
+    .toggle-menu {
+        display: none; /
+    }  
+
+    .toggle-menu.active {
+        display: none; /
+    }  
+} 
+
+@media (max-width: 900px) {
+    .logo {
+        margin-left: 10%;
+        width: 90px;
+    }
+    .menu {
+        display: none; 
+    }
+    .toggle {
+        display: flex;
+    }
+    .toggle-menu {
+        display: none; /
+    }     
+}
+
+
+
+
+
+
+

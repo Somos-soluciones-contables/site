@@ -1,6 +1,6 @@
 /* Generales */
 @media (max-width: 900px) {
-    .logo {
+    /* .logo {
         margin-left: 10%;
         width: 90px;
     }
@@ -12,7 +12,7 @@
     }
     .toggle-menu {
         display: none; /
-    }  
+    }   */
 
     .contact-container {
         flex-direction: column; 
@@ -87,12 +87,12 @@
 
 /* Para el menú */
 @media (max-width: 1200px) {
-    .menu a {
+    /* .menu a {
         width: 15%;
-    }
+    } */
 }      
 @media (min-width: 901px) {
-    .menu {
+    /* .menu {
         display: flex; 
     }
 
@@ -105,7 +105,7 @@
 
     .toggle-menu.active {
         display: none; /
-    }  
+    }   */
 } 
 /* Para el formulario de contacto */
 @media (max-width: 1050px) {
@@ -119,9 +119,6 @@
         font-size: 12px; 
         top: 10px;
     }  
-    .footer-credits p {
-        margin: 5px 0 5px 15px;
-    }          
 }
 @media (max-width: 700px) {   
     .contact-form-container h2 {
@@ -155,20 +152,6 @@
     .encapsulated-services .image-column, .encapsulated-services .text-column {
         flex: 1 1 100%;
     }
-
-
-/* 
-    .card {
-        width: 50%;
-        height:  232px;
-        
-        
-
-    } */
-
-    .card-title {
-        font-size: 30px;
-    }
 }
 
 @media (max-width: 430px) {
@@ -192,76 +175,18 @@
         font-size: 13px;
 
     }
-
-    /* .card {
-        width: 100%;
-        height:  200px;
-        
-        
-
-    } */
-    
-    .section3 h1 {
-        font-size: 36px;
-    }
-
 }
 
 
 
 @media (max-width: 900px) {
-    .card {
-        width: 50%;
-    }
 
-    .img-card {
-        object-fit: contain;
-
-    }
-    
     .our_team {
         margin-bottom: 50px;
     }
-}
-
-
-@media (max-width: 500px) {
-
-    .card {
-        width: 50%;
-    }
-
-    .img-card {
-       width: 100%;
-       height: 100%;
-       
-
-    }
 
 }
 
-@media (max-width: 400px) {
-
-    .card {
-        width: 100%;
-    }
-
-    .img-card {
-        width: 100%;
-        height: 175PX;
-        
- 
-     }
-
-    .footer-buttons a {
-        margin: 10px 5px; 
-    }    
-
-}
-
-
-
-  
 
 
 
