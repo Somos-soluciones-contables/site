@@ -1,19 +1,17 @@
 /* Estilos de las secciones */
 section {
     color: #2e5790;
-    margin: 0; /* Eliminar margen por defecto en las secciones */
+    margin: 0; 
+    opacity: 0; /* Inicialmente invisibles */
+    animation: fadeIn2 1.5s forwards ease-in-out;
 }
-.section2 h3 {
-    font-weight: 400;
-    font-size: 25px;
-    margin-left: 10px;
-    margin-top: 10px;
-}
+
 .section1, .section2, .section3, .contact {
     padding: 50px 20px; /* Padding superior y lateral */
     text-align: center;
     background-color: #ffffff;
 }
+
 .section1 {
     background-image: url(../public/wave.svg);
     background-size: cover;
@@ -47,6 +45,13 @@ section {
     margin-left: 10%;
 }
 
+.section2 h3 {
+    font-weight: 400;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
 .section3 h1 {
     font-size: 60px;
     margin-bottom: 50px;
@@ -55,5 +60,15 @@ section {
     text-align: right;
     font-weight: 300;
     color: #2E5790;
+}
 
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

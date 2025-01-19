@@ -1,0 +1,133 @@
+.encapsulated-services body {               
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.encapsulated-services .services {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.encapsulated-services .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.encapsulated-services .column {
+    padding: 0px;
+}
+
+.encapsulated-services .image-column {
+    flex: 1 1 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* border-radius: 12px; */
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+.encapsulated-services .text-column {
+    flex: 1 1 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    /* border-radius: 12px; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    transition: transform 2s ease;
+    text-align: left;
+}
+
+.encapsulated-services .text-column:hover {
+    transform: translateY(-10px);
+}
+
+.encapsulated-services .responsive-image {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+    /* border-radius: 12px; */
+}
+
+.encapsulated-services h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.encapsulated-services h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.encapsulated-services .icon-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.encapsulated-services .icon-text svg {
+    margin-right: 15px;
+}
+
+.encapsulated-services p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.encapsulated-services ul {
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.encapsulated-services ul li {
+    margin-bottom: 10px;
+}
+
+/* Animaciones */
+.encapsulated-services .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@media (max-width: 1000px) {
+    .encapsulated-services .text-column {
+        padding: 20px;
+    }
+
+    .encapsulated-services .image-column, .encapsulated-services .text-column {
+        flex: 1 1 100%;
+    }
+
+    .encapsulated-services .responsive-image {
+        width: 100%;
+        height: 400px;
+    }            
+}
+
+@media (max-width: 768px) {
+    .encapsulated-services .image-column, .encapsulated-services .text-column {
+        flex: 1 1 100%;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+
+

@@ -52,6 +52,7 @@
     margin: 5px 0 5px 20px;
 }
 
+/* Mobile */
 @media (max-width: 1050px) {
     .footer-credits p {
         margin: 5px 0 5px 15px;

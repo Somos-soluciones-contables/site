@@ -4,356 +4,51 @@ body {
     margin: 0;
     padding: 0;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 h1, h2 {
     color: #2e5790;
 }
+
 h2 {
     margin-bottom: 20px;
     text-align: left;
     font-weight: 300;
 }
 
-/* Estilo para el menú de navegación */
-.menu {
-    display: flex;
-    flex-grow: 0.5;
-    justify-content: right;
-    margin-right: 20px;
-
-}
-.menu a {
-    text-align: center;
-    /* flex-grow: 1;  */
-    color: #2E5790;
-    padding: 10px; /* Agregar un poco de padding para mejor apariencia */
-}
-
-
-
-
-
-/* Estilos de la sección 2 */
-.wrapper {
-    margin-top: 60px;
-    text-align: center;
-    margin-bottom: 2%;
-}
-.wrapper h1 {
-    font-size: 60px;
-    /* text-align: center; */
-    align-items: start;
-    font-weight: 300;
-}
-.our_team {
-    width: auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 200px;
-}
-.our_team .team_member {
-    width: 360px;
-    margin: 5px;
-    background: #e6e6e638;
-    padding: 20px 10px;
-}
-.our_team .team_member .member_img {
-    background: #3030302f;
-    max-width: 250px;
-    width: 100%;
-    height: 250px;
-    margin: 0 auto;
-    border-radius: 50%;
-    padding: 5px;
-    position: relative;
-    cursor: pointer;
-}
-.our_team .team_member .member_img img {
-    width: 100%;
-    height: 100%;
-}
-.our_team .team_member h3 {
-    font-size: 22px;
-    line-height: 18px;
-    letter-spacing: 2px;
-    margin: 15px 0 0px;
-    color: #ffffff;
-    font-weight: 300;
-}
-.our_team .team_member span {
-    font-size: 12px;
-    color: #353535;
-    font-weight: bold;
-}
-.our_team .team_member p {
-    margin-top: 20px;
-    font-size: 14px;
-    line-height: 20px;
-    color: #ffffff;
-}
-.our_team .team_member .member_img .social_media {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    background: rgba(0, 0, 0, 0.164);
-    width: 96%;
-    height: 96%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0);
-    transition: all 0.5s ease;
-}
-
-.our_team .team_member .member_img .social_media .item {
-    margin: 0 10px;
-}
-.our_team .team_member .member_img .social_media .fab {
-    color: #ffffff;
-    font-size: 20px;
-}
-.our_team .team_member .member_img:hover .social_media {
-    transform: scale(1);
-}
-
-/* Estilos del formulario de contacto */
-.contact-container {
-    display: flex;
-    justify-content: space-between;
-}
-.contact-form-container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
-    width: 95%;
-    max-width: 900px;
-    margin: auto;
-    margin-right: 10%;
-}
-/* Alinear el texto del último elemento */
-.contact-form-container > :last-child {
-    text-align: right;
-}
-.contact-form-container h2 {
-    font-size: 40px;
-}
-#contact-form-placeholder {
-    flex: 2;
-}
-
-.placeholder {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    color: #aaa;
-    transition: opacity 1.0s ease;
-    pointer-events: none;
-    font-size: 14px;
-    flex: 2;
-}
-.empty-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    font-size: 60px;
-    margin-left: 10%;
-}
-.social-icons-wrapper {
-    display: flex;
-    justify-content: left;
-    gap: 15px;
-    margin-top: 5px;
-}
-.social-icons-wrapper .social-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    color: white;
-    text-decoration: none;
-    background-color: #4d4d4d;
-    transition: background-color 0.3s ease;
-}
-.social-icons-wrapper .social-icon:hover {
-    background-color: #fff;
-    color: #388fc8;
-}
-.social-icons-wrapper .whatsapp {
-    background-color: #2f88c0;
-}
-.social-icons-wrapper .whatsapp:hover {
-    background-color: #25D366; /* Color al hacer hover en WhatsApp */
-    color: #fff; /* Cambia el color del ícono o el texto */
-}
-.social-icons-wrapper .facebook {
-    background-color: #2A4D7F;
-}
-.social-icons-wrapper .facebook:hover {
-    background-color: #1877F2; /* Color al hacer hover en Facebook */
-    color: #fff;
-}
-.social-icons-wrapper .instagram {
-    background-color: #F2B4D3;
-}
-.social-icons-wrapper .instagram:hover {
-    background-color: #C13584; /* Color al hacer hover en Instagram */
-    color: #fff;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    background-color: #EAF3F9;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-input:focus, textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    outline: none;
-}
-
-.input-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.input-container {
-    position: relative;
-    flex: 1; /* Permitir que los campos crezcan */
-    margin-right: 10px;
-}
-
-.input-container:last-child {
-    margin-right: 0;
-}
-
-textarea {
-    height: 150px;
-}
-
-input:focus + .placeholder,
-input:not(:placeholder-shown) + .placeholder,
-textarea:focus + .placeholder,
-textarea:not(:placeholder-shown) + .placeholder {
-    opacity: 0;
-}
-
-.contact-title {
-    margin-left: 10%;
-    font-size: 60px;
-    font-weight: 400;
-}
-
-.contact-label {
-    font-size: 18px;
-    font-weight: 500;
-    text-align: left;
-}
-
-.contact-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin: 5px 0;
-}
-
-.contact-button {
-    display: flex;
-    align-items: left;
-    color: #aaa;
-    padding: 10px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s;
-}
-.contact-button i {
-    margin-right: 8px; /* Espaciado entre el icono y el texto */
-}
-
-.contact-button:hover {
-    color: #1f1f1f; /* Color al pasar el cursor */
-}
-button {
-    margin-top: 10px;
-    width: 20%;
-    padding: 10px;
-    background-color: #388fc8;
-    color: white;
-    border: 2px solid #a0c4ff;
-    border-color: #388fc8;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background-color 0.3s, transform 0.2s;
-}
-button:hover {
-    background-color: #ffffff; /* Color al pasar el ratón */
-    transform: scale(1.05); /* Efecto de aumento al pasar el cursor */
-    color: #388fc8;
-}
-button:active {
-    transform: scale(0.95); /* Efecto de contracción al hacer clic */
-}
-
-
-
-
-
-
-@media (max-width: 768px) {
-    .card {
-        width: 100%; /* Las tarjetas ocuparán el ancho completo en pantallas pequeñas */
-        height: auto; /* Altura automática para adaptarse al contenido */
-    }
-}
-
-
-  /* Estilos para el contenedor del slider */
-  #custom-slider {
+/* Estilos para el contenedor del slider */
+#custom-slider {
     margin-top: 70px;
     background-color: rgba(245, 245, 245, 0);
     /* padding: 8em 2em; */
     max-width:auto;
-  }
+}
 
-  /* Estilos para la pista del slider */
-  #custom-slide-track {
+/* Estilos para la pista del slider */
+#custom-slide-track {
     width: 100%;
     display: flex;
     gap: 3em;
     overflow: hidden;
     max-width:auto;
-  }
+}
 
-  /* Estilos para las imágenes dentro del slider */
-  #custom-slider img {
+/* Estilos para las imágenes dentro del slider */
+#custom-slider img {
     width: 150px;
     height: 150px;
     animation: custom-scroll 120s linear infinite;
-  }
+}
 
-  /* Animación del scroll */
-  @keyframes custom-scroll {
+/* Animación del scroll */
+@keyframes custom-scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-1000%); }
-  }
+}
 
 

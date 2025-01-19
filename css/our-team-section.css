@@ -1,0 +1,124 @@
+/* Estilos de la sección quienes somos */
+.wrapper {
+    margin-top: 60px;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.wrapper h1 {
+    font-size: 60px;
+    align-items: start;
+    font-weight: 300;
+}
+
+.our_team {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 200px;
+}
+
+.our_team .team_member {
+    width: 360px;
+    margin: 5px;
+    background: #e6e6e638;
+    padding: 20px 10px;
+}
+
+.our_team .team_member .member_img {
+    background: #3030302f;
+    max-width: 300px;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    /* border-radius: 50%; */
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.our_team .team_member .member_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.our_team .team_member h3 {
+    font-size: 22px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin: 15px 0 0px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.our_team .team_member span {
+    font-size: 12px;
+    color: #353535;
+    font-weight: bold;
+}
+
+.our_team .team_member p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+}
+
+.our_team .team_member .member_img .social_media {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: rgba(0, 0, 0, 0.164);
+    width: 96%;
+    height: 96%;
+    /* border-radius: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+
+.our_team .team_member .member_img:hover .social_media {
+    transform: scale(1);
+}
+
+.our_team .team_member .member_img .social_media .item {
+    margin: 0 10px;
+}
+
+.our_team .team_member .member_img .social_media .fab {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.linkedin_item {
+   padding-top: 150px;
+}
+
+
+@media (max-width: 1550px) {
+    .our_team .team_member h3 {
+        color: rgb(63, 63, 63);
+    }
+
+    .our_team .team_member p {
+        color: rgb(63, 63, 63);
+    }
+
+}     
+
+@media (max-width: 900px) {
+  .our_team {
+        margin-bottom: 50px;
+    }
+
+}
+
+@media (max-width: 700px) {     
+    .our_team .team_member .member_img {
+        max-width: 200px;
+        height: 200px;
+    }
+}

@@ -9,6 +9,7 @@
     align-items: center;
     z-index: 1000;
 }
+
 .navbar a {
     color: #2E5790;
     text-decoration: none;
@@ -17,6 +18,7 @@
     transition: background 0.3s, color 0.3s;
     margin-right: 5%;
 }
+
 .navbar a:hover {
     background-color: #fafafa;
     color: #4e8fe9;
