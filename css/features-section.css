@@ -110,7 +110,7 @@
 /* Estilos para pantallas menores a 750px */
 @media (max-width: 580px) {
     .features-slider-container h2 {
-        font-size: 18px; /* Reducimos el tamaño de fuente */
+        font-size: 22px; /* Reducimos el tamaño de fuente */
         padding: 0;
         margin-left: 1%;
     }
