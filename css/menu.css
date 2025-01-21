@@ -33,7 +33,7 @@
     width: 100%;
     background-color: #ffffff; 
     position: absolute;
-    top: 90px; 
+    top: 100px; 
     left: 0;
     z-index: 999; 
     font-size: 15px;
@@ -113,7 +113,7 @@
 
 @media (max-width: 900px) {
     .logo {
-        margin-left: 10%;
+        margin-left: 2%;
         width: 90px;
     }
     .menu {
@@ -126,3 +126,5 @@
         display: none; /
     }     
 }
+
+

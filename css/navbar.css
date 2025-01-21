@@ -8,6 +8,7 @@
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    height: 100px;
 }
 
 .navbar a {
@@ -20,6 +21,6 @@
 }
 
 .navbar a:hover {
-    background-color: #fafafa;
+    background-color: #ffffff00;
     color: #4e8fe9;
 }

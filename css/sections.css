@@ -13,12 +13,13 @@ section {
 }
 
 .section1 {
-    background-color: #436fadc7;
+    background-color: #4e6fa0;
     background-image: url(../public/wave.svg);
     background-size: cover;
     /*background-position: center; */
     background-position: bottom;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+
 }
 
 .section2 {
@@ -30,7 +31,7 @@ section {
 }
 
 .section3 {
-    background-image: url(../public/wave2.svg);
+    /* background-image: url(../public/wave2.svg); */
     /* background-size: cover; */
     /*background-position: center; */
     color: white;
@@ -62,6 +63,12 @@ section {
     text-align: right;
     font-weight: 300;
     color: #2E5790;
+}
+
+@media (max-width: 520px) {
+    .section3 h1 {
+        font-size: 40px;
+    }
 }
 
 @keyframes fadeIn2 {

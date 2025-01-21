@@ -1,0 +1,124 @@
+
+/* .features-slider-container .features-slide-text {
+    background-color: #2e579000;
+    height: 100px;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+.features-slider-container .features-slide-text {
+    background-color: #2e579000;
+    height: auto; /* Ajustamos la altura automáticamente */
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 10px; /* Espacio entre elementos */
+}
+
+
+.features-slider-container h2 {
+    font-size: 30px;
+    padding-right: 20px;
+    color: white;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.features-slider-container .features {
+    overflow: hidden;
+}
+
+.features-slider-container ul, .features-slider-container li {
+    color: white;
+    list-style: none;
+}
+
+.features-slider-container ul {
+    width: 230px;
+    height: 70px;
+    position: relative;
+    animation: features-slide 10s cubic-bezier(0.1, -0.2, 0.27, 1) infinite; /* Se aumenta la duración a 10 segundos */
+}
+
+.features-slider-container li {
+    position: absolute;
+    height: 70px;
+    top: 400%; /* Ajustamos para mostrar todos los elementos */
+    line-height: 70px;
+    font-size: 45px;
+} 
+
+.features-slider-container li:nth-child(1) {
+    top: 100%;
+}
+
+.features-slider-container li:nth-child(2) {
+    top: 200%;
+}
+
+.features-slider-container li:nth-child(3) {
+    top: 300%;
+}
+
+.features-slider-container li:nth-child(4) {
+    top: 400%; /* Nueva posición para el cuarto elemento */
+}
+
+@keyframes features-slide {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-100%);
+    }
+    40% {
+        transform: translateY(-200%);
+    }
+    60% {
+        transform: translateY(-300%);
+    }
+    80% {
+        transform: translateY(-400%);
+    }
+    100% {
+        transform: translateY(-500%); /* Ajustamos el desplazamiento final */
+    }
+}
+
+/* Estilos para pantallas menores a 750px */
+@media (max-width: 750px) {
+    .features-slider-container h2 {
+        font-size: 22px; /* Reducimos el tamaño de fuente */
+        padding: 0;
+        margin-left: 5%;
+    }
+
+    .features-slider-container li {
+        font-size: 30px; /* Reducimos el tamaño de fuente */
+
+    }
+}
+
+
+/* Estilos para pantallas menores a 750px */
+@media (max-width: 580px) {
+    .features-slider-container h2 {
+        font-size: 18px; /* Reducimos el tamaño de fuente */
+        padding: 0;
+        margin-left: 1%;
+    }
+
+    .features-slider-container li {
+        align-items: center;
+        font-size: 25px; /* Reducimos el tamaño de fuente */
+        padding-left: 50px;
+
+    }
+}

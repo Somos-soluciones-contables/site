@@ -55,8 +55,8 @@
 
 .our_team .team_member span {
     font-size: 12px;
-    color: #353535;
-    font-weight: bold;
+    color: #ffffff;
+    font-weight: 800;
 }
 
 .our_team .team_member p {
@@ -80,8 +80,6 @@
     transform: scale(0);
     transition: all 0.5s ease;
 }
-
-
 
 .our_team .team_member .member_img:hover .social_media {
     transform: scale(1);
@@ -125,3 +123,11 @@
         height: 200px;
     }
 }
+
+@media (max-width: 520px) {  
+    .wrapper h1 {
+        font-size: 40px;
+        align-items: start;
+        font-weight: 300;
+    }
+}    
