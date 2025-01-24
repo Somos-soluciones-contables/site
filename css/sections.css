@@ -13,7 +13,8 @@ section {
 }
 
 .section1 {
-    background-color: #4e6fa0;
+    background-color: #4e6fa0; 
+    /* background-color: #31629B; */
     background-image: url(../public/wave.svg);
     background-size: cover;
     /*background-position: center; */

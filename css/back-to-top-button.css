@@ -1,0 +1,39 @@
+/* Contenedor principal del botón */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    display: none; /* Oculto por defecto */
+  }
+  
+  /* Estilo del enlace */
+  .back-to-top-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Efecto hover creativo */
+  .back-to-top-link:hover {
+    transform: rotate(360deg) scale(1.1);
+    background-color: #0056b3;
+  }
+  
+  /* Mostrar el botón al hacer scroll */
+  .show-back-to-top {
+    display: block;
+  }
+  

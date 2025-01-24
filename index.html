@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="css/our-team-section.css">
     <link rel="stylesheet" href="css/contact-section.css">
     <link rel="stylesheet" href="css/features-section.css">
-    
+    <link rel="stylesheet" href="css/floating-whatsapp-button.css">
+    <link rel="stylesheet" href="css/back-to-top-button.css">  
 </head>
 <body>
     <!-- Barra de navegación -->
@@ -326,6 +327,18 @@
             </div>
         </div>
     </footer>
+    <div class="whatsapp-float">
+        <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-link" aria-label="Chat on WhatsApp">
+          <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+        </a>
+    </div>
+    <div class="back-to-top" id="backToTop">
+        <a href="#top" class="back-to-top-link" aria-label="Back to top">
+          ⬆
+        </a>
+    </div>
+            
+
 
     <script>
         // Función para activar el toggle menu
@@ -366,5 +379,25 @@
         // Llamar a la función para crear el formulario al cargar la página
         window.onload = createContactForm;
     </script>
+    <script>
+        // Obtener el botón
+        const backToTop = document.getElementById('backToTop');
+    
+        // Mostrar/ocultar el botón al hacer scroll
+        window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            backToTop.classList.add('show-back-to-top');
+        } else {
+            backToTop.classList.remove('show-back-to-top');
+        }
+        });
+    
+        // Scroll suave al hacer clic
+        backToTop.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+  
 </body>
 </html>
