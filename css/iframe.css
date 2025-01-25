@@ -1,0 +1,11 @@
+#responsive-iframe {
+    width: 100%;
+    height: 500px; /* Altura por defecto */
+  }
+  
+  @media (max-width: 700px) {
+    #responsive-iframe {
+      height: 900px; /* Altura para pantallas medianas */
+    }
+  }
+  

@@ -126,7 +126,7 @@ input:focus, textarea:focus {
 .contact-button {
     display: flex;
     align-items: left;
-    color: #aaa;
+    color: #ffffff;
     padding: 10px;
     text-decoration: none;
     font-size: 14px;
@@ -138,7 +138,7 @@ input:focus, textarea:focus {
 }
 
 .contact-button:hover {
-    color: #1f1f1f; /* Color al pasar el cursor */
+    color: #c9c9c9; /* Color al pasar el cursor */
 }
 
 button {

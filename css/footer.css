@@ -1,7 +1,7 @@
 /* Estilos para el Footer */
 .footer {
-    background-color: #2e5790;
-    color: white;
+    background-color: #ffffff;
+    color: #2e5790;
     padding: 10px 10%;
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@
 }
 
 .footer-buttons a {
-    color: #fff;
+    color: #2E5790;
     /* margin: 15px 10px; */
     margin: clamp(3px, 2vw, 20px); 
     text-decoration: none;
@@ -38,8 +38,8 @@
 }
 
 .footer-buttons a:hover {
-    color: #353434;
     transform: translateY(-2px);
+    background-color: #ffffff00;
 }
 
 .footer-credits {
