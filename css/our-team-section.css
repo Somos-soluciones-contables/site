@@ -98,17 +98,6 @@
    padding-top: 150px;
 }
 
-/* 
-@media (max-width: 1550px) {
-    .our_team .team_member h3 {
-        color: rgb(63, 63, 63);
-    }
-
-    .our_team .team_member p {
-        color: rgb(63, 63, 63);
-    }
-
-}      */
 
 @media (max-width: 900px) {
   .our_team {

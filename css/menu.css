@@ -1,5 +1,5 @@
 .logo {
-    margin-left: 10%;
+    margin-left: 5%;
     width: 100px;
 }
 
@@ -14,7 +14,7 @@
 .menu a {
     text-align: center;
     color: #2E5790;
-    padding: 10px; 
+    padding: 0px; 
 }
 
 .toggle-menu {
@@ -113,7 +113,7 @@
 
 @media (max-width: 900px) {
     .logo {
-        margin-left: 2%;
+        margin-left: 1%;
         width: 90px;
     }
     .menu {

@@ -15,6 +15,14 @@
     margin-right: 10%;
 }
 
+.contact-form-container h3{
+    color: #2E5790;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 300;    
+}
+
 .contact-form-container > :last-child {
     text-align: right;
 }
@@ -145,10 +153,10 @@ button {
     margin-top: 10px;
     width: 20%;
     padding: 10px;
-    background-color: #388fc8;
+    background-color: #2E5790;
     color: white;
     border: 2px solid #a0c4ff;
-    border-color: #388fc8;
+    border-color: #2E5790;
     border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
@@ -159,7 +167,7 @@ button {
 button:hover {
     background-color: #ffffff; /* Color al pasar el ratón */
     transform: scale(1.05); /* Efecto de aumento al pasar el cursor */
-    color: #388fc8;
+    color: #2E5790;
 }
 
 button:active {
