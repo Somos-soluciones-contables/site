@@ -21,13 +21,25 @@ h2 {
     font-weight: 300;
 }
 
+
+.no-style {
+    text-decoration: none;
+    color: inherit;
+}
+
+.no-style:focus, .no-style:hover {
+    outline: none;
+    color: #0099ff;
+}
+
 /* Estilos para el contenedor del slider */
 #custom-slider {
     margin-top: 70px;
-    background-color: rgba(245, 245, 245, 0);
+    background-color: rgba(255, 255, 255, 0);
     /* padding: 8em 2em; */
     max-width:auto;
 }
+
 
 /* Estilos para la pista del slider */
 #custom-slide-track {

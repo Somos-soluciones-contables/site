@@ -65,8 +65,11 @@
                         </div>
                     </div>
                     <h3>Gabriela Surbán</h3>
-                    <span>CONTADORA PÚBLICA UNC</span>
-                    <p>Matricula Profesional: 10.17528.2 <br>Especialidad en Contabilidad y Auditoría UNC</p>
+                    <span>CONTADORA PÚBLICA U.N.C</span>
+                    <p>
+                        Matricula Profesional: <a href="https://cpcecba.org.ar/servicios/registro.asp" class="no-style matricula">10-17528-2</a> <br>
+                        Especialidad en Contabilidad y Auditoría U.N.C
+                    </p>                    
                 </div>
                 <div class="team_member">
                     <div class="member_img">
@@ -78,8 +81,10 @@
                         </div>
                     </div>
                     <h3>Nicolás Acuña</h3>
-                    <span>CONTADOR PUBLICO UNC</span>
-                    <p>Matricula Profesional: 10.18634.7</p>
+                    <span>CONTADOR PUBLICO U.N.C</span>
+                    <p>
+                        Matricula Profesional: <a href="https://cpcecba.org.ar/servicios/registro.asp" class="no-style matricula">10-18634-7</a> <br>
+                    </p>
                 </div>
                 <div class="team_member">
                     <div class="member_img">
@@ -91,8 +96,11 @@
                         </div>
                     </div>
                     <h3>Cristina Vetter</h3>
-                    <span>CONTADORA PÚBLICA UNC</span>
-                    <p>Matricula Profesional: 10.17858.8 <br>Esp. en Contabilidad y Auditoría UNC</p>
+                    <span>CONTADORA PÚBLICA U.N.C</span>
+                    <p>
+                        Matricula Profesional: <a href="https://cpcecba.org.ar/servicios/registro.asp" class="no-style matricula">10-17858-8</a> <br>
+                        Especialidad en Contabilidad y Auditoría U.N.C
+                    </p>
                 </div>
                 <div class="team_member">
                     <div class="member_img">
@@ -104,8 +112,10 @@
                         </div>
                     </div>
                     <h3>Leandro Sánchez</h3>
-                    <span>CONTADOR PÚBLICO UNC</span>
-                    <p>Matricula Profesional: 10.17648.3</p>
+                    <span>CONTADOR PÚBLICO U.N.C</span>
+                    <p>
+                        Matricula Profesional: <a href="https://cpcecba.org.ar/servicios/registro.asp" class="no-style matricula">10-17648-3</a> <br>
+                    </p>                    
                 </div>  
             </div>
         </div>	
@@ -139,10 +149,10 @@
                             <div>
                                 <h3>Áreas a mejorar: <br><br></h3>
                                 <p>- Compras y cuentas por pagar <br>
-                                    - Disponibilidades: caja y bancos <br>
-                                    - Inventarios <br>
-                                    - Cuentas por cobrar <br>
-                                    - Viaticos <br>
+                                    - Disponibilidades: caja y bancos. <br>
+                                    - Inventarios. <br>
+                                    - Cuentas por cobrar. <br>
+                                    - Viaticos. <br>
                                 </p>
                             </div>
                         </div>        
@@ -414,6 +424,18 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
-  
+    <script>
+        // Selecciona todos los enlaces con la clase 'matricula'
+        document.querySelectorAll('.matricula').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Evita que se siga el enlace inmediatamente
+                const matricula = this.textContent.replace(/-/g, '').trim(); // Elimina los guiones y los espacios en blanco
+                navigator.clipboard.writeText(matricula).then(function() {
+                // Después de copiar, redirige al enlace en una nueva pestaña
+                window.open(event.target.href, '_blank');
+                })
+            });
+        });
+    </script>
 </body>
 </html>

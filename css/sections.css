@@ -13,10 +13,10 @@ section {
 }
 
 .section1 {
-    background-color: #ffffff;
-    /* background-color: #ffffff;  */
-    /* background-color: #31629B; */
-    background-image: url(../public/wave.svg);
+    /* background-color: #ffffff; */
+
+    background-color: #2E5790;
+    background-image: url(../public/wave5.svg);
     background-size: cover;
     /*background-position: center; */
     background-position: bottom;
@@ -27,7 +27,7 @@ section {
 
 .section2 {
     background-color: #ffffff;
-    background-image: url(../public/wave.svg);
+    background-image: url(../public/wave5.svg);
     background-size: cover;
     /* background-position: top; */
     background-position: bottom;
@@ -67,7 +67,7 @@ section {
     text-align: right;
     margin-right: 10%;
     margin-left: 10%;
-    color: #2E5790;
+    color: #ffffff;
     /* color:#ffffff; */
 }
 
