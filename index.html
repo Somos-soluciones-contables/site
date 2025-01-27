@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Somos Soluciones Contables</title>
-    
-    <!-- Importar la fuente Open Sans desde Google Fonts -->
+    <link rel="icon" href="./favicon.png" type="image/x-icon">    
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/mobile.css">
@@ -57,7 +56,7 @@
             <div class="our_team">
                 <div class="team_member">
                     <div class="member_img">
-                        <img src="public/member1.png" alt="Gabriela Surbán">
+                        <img src="public/member11.png" alt="Gabriela Surbán">
                         <div class="social_media">
                             <a href="https://ar.linkedin.com/in/gabriela-surban-124a83238" target="_blank">
                                 <div class="linkedin_item"><i class="fab fa-linkedin-in"></i></div>
@@ -73,7 +72,7 @@
                 </div>
                 <div class="team_member">
                     <div class="member_img">
-                        <img src="public/member2.png" alt="Nicolás Acuña">
+                        <img src="public/member22.png" alt="Nicolás Acuña">
                         <div class="social_media">
                             <a href="https://ar.linkedin.com/in/nicol%C3%A1s-manuel-acu%C3%B1a-5b895933" target="_blank">
                                 <div class="linkedin_item"><i class="fab fa-linkedin-in"></i></div>
@@ -88,7 +87,7 @@
                 </div>
                 <div class="team_member">
                     <div class="member_img">
-                        <img src="public/member3.png" alt="Cristina Vetter">
+                        <img src="public/member33.png" alt="Cristina Vetter">
                         <div class="social_media">
                             <a href="https://ar.linkedin.com/in/cristina-vetter-260807247" target="_blank">
                                 <div class="linkedin_item"><i class="fab fa-linkedin-in"></i></div>
@@ -104,7 +103,7 @@
                 </div>
                 <div class="team_member">
                     <div class="member_img">
-                        <img src="public/member4.png" alt="Leandro Sánchez">
+                        <img src="public/member44.png" alt="Leandro Sánchez">
                         <div class="social_media">
                             <a href="https://ar.linkedin.com/in/cristina-vetter-260807247" target="_blank">
                                 <div class="linkedin_item"><i class="fab fa-linkedin-in"></i></div>
@@ -137,13 +136,12 @@
                             <p>Nuestro objetivo es la prevención y detección de los fraudes antes de que lleguen a concretarse. Buscamos agregar valor a la empresa a través de una mejora continua en los procesos, mejorando los controles internos en cada área.</p>
                         </div>
                         <div class="icon-text">
-                            <!-- <svg width="32" height="32" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> 
-                                <circle cx="16" cy="16" r="16" fill="#4CAF50"></circle>
-                                <path d="M12 16l3 3l7-7" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg> -->
-                            <svg width="40" height="40">
+                            <!-- <svg width="40" height="40">
                                 <image href="public/check.svg" width="40" height="40"/>
-                            </svg>                            
+                            </svg>                             -->
+                            <div class="bullseye-icon">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>  
                         </div>
                         <div class="icon-text">
                             <div>
@@ -157,9 +155,13 @@
                             </div>
                         </div>        
                         <div class="icon-text">
-                            <svg width="40" height="40">
+                            <!-- <svg width="40" height="40">
                                 <image href="public/time.svg" width="40" height="40"/>
-                            </svg>   
+                            </svg>    -->
+                            <div class="icon-container">
+                                <i class="fa-regular fa-lightbulb"></i>
+                                <i class="fa-solid fa-lightbulb" style="display: none;"></i>
+                            </div>                            
                         </div>                          
                         <div class="icon-text">
                             <div>
@@ -188,22 +190,7 @@
                 </div>
             </section>
         </div> 
-        <!-- <div class="features-slider-container">
-            <div class="features-slide-text">
-                <h2>Ofrecemos asesoramiento:</h2>
-                <div class="features">
-                    <ul>
-                        <li>Impositivo.</li>
-                        <li>Societario.</li>
-                        <li>Laboral.</li>
-                        <li>Financiero.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>         -->
-        <!-- <iframe src="tailwind-section.html" width="100%" height="500px" frameborder="0" style="overflow: hidden;"></iframe> -->
         <iframe id="responsive-iframe" src="tailwind-section.html" width="100%" frameborder="0" style="overflow: hidden;"></iframe>
-
     </section>
 
     <!-- Sección 3  Clientes-->
@@ -264,7 +251,7 @@
 
     </section>    
 
-    <!-- Sección 3  Contacto-->
+    <!-- Sección 4  Contacto-->
     <section id="contact" class="contact"> 
         <h2 class="contact-title">Contacto</h2> 
         <div class="contact-container">
@@ -352,8 +339,6 @@
         </a>
     </div>
             
-
-
     <script>
         // Función para activar el toggle menu
         function toggleMenu() {
@@ -406,7 +391,6 @@
         window.onload = createContactForm;
     </script>
     <script>
-        // Obtener el botón
         const backToTop = document.getElementById('backToTop');
     
         // Mostrar/ocultar el botón al hacer scroll
@@ -418,24 +402,37 @@
         }
         });
     
-        // Scroll suave al hacer clic
         backToTop.addEventListener('click', (e) => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
     <script>
-        // Selecciona todos los enlaces con la clase 'matricula'
         document.querySelectorAll('.matricula').forEach(function(link) {
             link.addEventListener('click', function(event) {
                 event.preventDefault(); // Evita que se siga el enlace inmediatamente
                 const matricula = this.textContent.replace(/-/g, '').trim(); // Elimina los guiones y los espacios en blanco
                 navigator.clipboard.writeText(matricula).then(function() {
-                // Después de copiar, redirige al enlace en una nueva pestaña
+                // Después de copiar, redirige
                 window.open(event.target.href, '_blank');
                 })
             });
         });
     </script>
+  <script>
+    // Script para alternar los iconos
+    const container = document.querySelector('.icon-container');
+    const icons = container.querySelectorAll('i');
+
+    container.addEventListener('mouseenter', () => {
+      icons[0].style.display = 'none'; // Oculta la bombilla apagada
+      icons[1].style.display = 'inline'; // Muestra la bombilla encendida
+    });
+
+    container.addEventListener('mouseleave', () => {
+      icons[0].style.display = 'inline'; // Muestra la bombilla apagada
+      icons[1].style.display = 'none'; // Oculta la bombilla encendida
+    });
+  </script>    
 </body>
 </html>
