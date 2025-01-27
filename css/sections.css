@@ -16,7 +16,7 @@ section {
     /* background-color: #ffffff; */
 
     background-color: #2E5790;
-    background-image: url(../public/wave5.svg);
+    background-image: url(../public/components/wave5.svg);
     background-size: cover;
     /*background-position: center; */
     background-position: bottom;
@@ -27,7 +27,7 @@ section {
 
 .section2 {
     background-color: #ffffff;
-    background-image: url(../public/wave5.svg);
+    background-image: url(../public/components/wave5.svg);
     background-size: cover;
     /* background-position: top; */
     background-position: bottom;
@@ -35,9 +35,6 @@ section {
 }
 
 .section3 {
-    /* background-image: url(../public/wave2.svg); */
-    /* background-size: cover; */
-    /*background-position: center; */
     color: #33639B;
     background-position: top;
     background-color: #ffffff;
@@ -52,7 +49,7 @@ section {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    background-image: url(../public/wave3.svg);
+    background-image: url(../public/components/wave3.svg);
     color: white;
 }
 
