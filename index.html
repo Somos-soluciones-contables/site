@@ -6,9 +6,10 @@
     
     <title>Somos Soluciones Contables</title>
     <link rel="icon" href="./public/favicon.png" type="image/x-icon">    
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Estilos -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/menu.css">
@@ -17,11 +18,16 @@
     <link rel="stylesheet" href="css/services-section.css">
     <link rel="stylesheet" href="css/our-team-section.css">
     <link rel="stylesheet" href="css/contact-section.css">
-    <!-- <link rel="stylesheet" href="css/features-section.css"> -->
     <link rel="stylesheet" href="css/floating-whatsapp-button.css">
     <link rel="stylesheet" href="css/back-to-top-button.css">  
-    <link rel="stylesheet" href="css/offer-section.css"> 
     <link rel="stylesheet" href="css/iframe.css"> 
+
+    <!-- Scripts -->
+    <script src="js/back-to-top-button.js" defer></script>  
+    <script src="js/licence-plate-click.js" defer></script>  
+    <script src="js/services-section-icons.js" defer></script>
+    <script src="js/menu-behavior.js" defer></script>  
+    <script src="js/contact-section.js" defer></script> 
 <body>
     <!-- Barra de navegación -->
     <div class="navbar">
@@ -134,9 +140,6 @@
                             <p>Nuestro objetivo es la prevención y detección de los fraudes antes de que lleguen a concretarse. Buscamos agregar valor a la empresa a través de una mejora continua en los procesos, mejorando los controles internos en cada área.</p>
                         </div>
                         <div class="icon-text">
-                            <!-- <svg width="40" height="40">
-                                <image href="public/check.svg" width="40" height="40"/>
-                            </svg>                             -->
                             <div class="bullseye-icon">
                                 <i class="fa-solid fa-list-check"></i>
                             </div>  
@@ -153,9 +156,6 @@
                             </div>
                         </div>        
                         <div class="icon-text">
-                            <!-- <svg width="40" height="40">
-                                <image href="public/time.svg" width="40" height="40"/>
-                            </svg>    -->
                             <div class="icon-container">
                                 <i class="fa-regular fa-lightbulb"></i>
                                 <i class="fa-solid fa-lightbulb" style="display: none;"></i>
@@ -247,7 +247,6 @@
             </div>
         </div>            
     </section>    
-
     <!-- Sección 4  Contacto-->
     <section id="contact" class="contact"> 
         <h2 class="contact-title">Contacto</h2> 
@@ -308,7 +307,6 @@
             </div> 
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -325,115 +323,17 @@
             </div>
         </div>
     </footer>
-
      <!-- Botón flotante whatsapp -->
     <div class="whatsapp-float">
         <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-link" aria-label="Chat on WhatsApp">
           <img src="./public/components/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
         </a>
     </div>
-
      <!-- Botón flotante back to top -->
     <div class="back-to-top" id="backToTop">
         <a href="#top" class="back-to-top-link" aria-label="Back to top">
             <i class="fa-solid fa-chevron-up"></i>
         </a>
     </div>
-            
-    <script>
-        // Función para activar el toggle menu
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            const toggle = document.querySelector('.toggle');
-            const toggleMenu = document.querySelector('.toggle-menu');
-            toggleMenu.classList.toggle('active');
-            toggle.classList.toggle('active'); // Activa la clase 'active' en el toggle
-            
-        }
-
-        function deactivateMenu() {
-            const menu = document.getElementById('menu');
-            const toggle = document.querySelector('.toggle');
-            const toggleMenu = document.querySelector('.toggle-menu');
-            
-            // Remover la clase 'active' si está presente
-            toggleMenu.classList.remove('active');
-            toggle.classList.remove('active');
-        }
-
-
-        // Smooth scroll
-        document.querySelectorAll('.navbar a, .footer a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth' });
-                deactivateMenu()
-            });
-        });
-
-        function createContactForm() {
-            const inputs = document.querySelectorAll('input, textarea');
-
-            inputs.forEach(input => {
-                input.addEventListener('blur', () => {
-                    if (!input.value) {
-                        input.classList.remove('filled');
-                    } else {
-                        input.classList.add('filled');
-                    }
-                });
-
-                // Simular un enfoque inicial
-                input.dispatchEvent(new Event('blur'));
-            });
-        }
-        // Llamar a la función para crear el formulario al cargar la página
-        window.onload = createContactForm;
-    </script>
-    <script>
-        const backToTop = document.getElementById('backToTop');
-    
-        // Mostrar/ocultar el botón al hacer scroll
-        window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) {
-            backToTop.classList.add('show-back-to-top');
-        } else {
-            backToTop.classList.remove('show-back-to-top');
-        }
-        });
-    
-        backToTop.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
-    <script>
-        document.querySelectorAll('.matricula').forEach(function(link) {
-            link.addEventListener('click', function(event) {
-                event.preventDefault(); // Evita que se siga el enlace inmediatamente
-                const matricula = this.textContent.replace(/-/g, '').trim(); // Elimina los guiones y los espacios en blanco
-                navigator.clipboard.writeText(matricula).then(function() {
-                // Después de copiar, redirige
-                window.open(event.target.href, '_blank');
-                })
-            });
-        });
-    </script>
-  <script>
-    // Script para alternar los iconos
-    const container = document.querySelector('.icon-container');
-    const icons = container.querySelectorAll('i');
-
-    container.addEventListener('mouseenter', () => {
-      icons[0].style.display = 'none'; // Oculta la bombilla apagada
-      icons[1].style.display = 'inline'; // Muestra la bombilla encendida
-    });
-
-    container.addEventListener('mouseleave', () => {
-      icons[0].style.display = 'inline'; // Muestra la bombilla apagada
-      icons[1].style.display = 'none'; // Oculta la bombilla encendida
-    });
-  </script>    
 </body>
 </html>
