@@ -3,7 +3,7 @@ const container = document.querySelector('.icon-container');
 const icons = container.querySelectorAll('i');
 
 container.addEventListener('mouseenter', () => {
-  icons[0].style.display = 'none'; // Foco apagada
+  icons[0].style.display = 'none'; // Foco apagado
   icons[1].style.display = 'inline'; // Foco encendido
 });
 

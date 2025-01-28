@@ -3,33 +3,27 @@ section {
     color: #2e5790;
     margin: 0; 
     opacity: 0; /* Inicialmente invisibles */
-    animation: fadeIn2 1.5s forwards ease-in-out;
+    animation: section-fadeIn 1.5s forwards ease-in-out;
 }
 
 .section1, .section2, .section3 {
-    padding: 50px 20px; /* Padding superior y lateral */
+    padding: 50px 20px;
     text-align: center;
     background-color: #ffffff;
 }
 
 .section1 {
-    /* background-color: #ffffff; */
-
     background-color: #2E5790;
-    background-image: url(../public/components/wave5.svg);
+    background-image: url(../public/components/wave1.svg);
     background-size: cover;
-    /*background-position: center; */
     background-position: bottom;
     background-repeat: no-repeat;
-    /* background-repeat: repeat-y; */
-
 }
 
 .section2 {
-    background-color: #ffffff;
-    background-image: url(../public/components/wave5.svg);
+    /* background-color: #ffffff; */
+    background-image: url(../public/components/wave1.svg);
     background-size: cover;
-    /* background-position: top; */
     background-position: bottom;
     background-repeat: no-repeat;
 }
@@ -37,21 +31,18 @@ section {
 .section3 {
     color: #33639B;
     background-position: top;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     background-repeat: no-repeat;
 }
 
-
 .contact {
-    /* padding: 50px 20px;  */
     padding: 50px 20px 20px 25px;
-
     text-align: center;
     background-color: #33639B;
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    background-image: url(../public/components/wave3.svg);
+    background-image: url(../public/components/wave2.svg);
     color: white;
 }
 
@@ -59,20 +50,16 @@ section {
     color: white;
 }
 
-
-
 .section1 h1 {
     margin-bottom: 5%;
     text-align: right;
     margin-right: 10%;
     margin-left: 10%;
     color: #ffffff;
-    /* color:#ffffff; */
 }
 
 .section2 h1 {
     color: #2E5790;
-    /* color:#ffffff; */
 }
 
 .section2 h3 {
@@ -99,7 +86,7 @@ section {
     }
 }
 
-@keyframes fadeIn2 {
+@keyframes section-fadeIn {
     0% {
         opacity: 0;
         transform: translateY(20px); 

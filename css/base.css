@@ -21,34 +21,64 @@ h2 {
     font-weight: 300;
 }
 
-
-.no-style {
-    text-decoration: none;
-    color: inherit;
-}
-
-.no-style:focus, .no-style:hover {
-    outline: none;
-    color: #0099ff;
-}
-
 /* Estilos para el contenedor del slider */
-#custom-slider {
+/* #custom-slider {
     margin-top: 70px;
     background-color: rgba(255, 255, 255, 0);
-    /* padding: 8em 2em; */
     max-width:auto;
+} */
+
+#custom-slider {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    overflow: hidden;
+    position: relative;
 }
 
+#custom-slider::before,
+#custom-slider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px; /* Ajusta el ancho del efecto */
+    z-index: 1;
+    pointer-events: none;
+}
 
-/* Estilos para la pista del slider */
+#custom-slider::before {
+    left: 0;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgba(206, 74, 74, 0));
+}
+
+#custom-slider::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
 #custom-slide-track {
+    display: flex;
+    position: relative;
+    z-index: 0; /* Asegura que el contenido esté debajo de los efectos */
+}
+/* Estilos para la pista del slider */
+/* #custom-slide-track {
     width: 100%;
     display: flex;
     gap: 3em;
     overflow: hidden;
     max-width:auto;
+} */
+
+#custom-slide-track {
+    max-width:auto;
+    
+    display: flex;
+    gap: 3em;
+    transition: transform 0.6s ease-in-out; /* Suaviza la transición */
+    will-change: transform; /* Mejora el rendimiento */
 }
+
+
 
 /* Estilos para las imágenes dentro del slider */
 #custom-slider img {
@@ -63,4 +93,51 @@ h2 {
     100% { transform: translateX(-1000%); }
 }
 
+
+#next-slide-btn {
+    position: relative; /* Alineado dentro del contenedor */
+    background-color: transparent; /* Transparente */
+    color: #2E5790; /* Color del ícono */
+    border: none; /* Sin bordes */
+    padding: 0; /* Sin relleno adicional */
+    cursor: pointer; /* Mano al pasar sobre el botón */
+    height: 100%; /* Ocupa toda la altura del carrusel */
+    width: 40px; /* Más alto que ancho */
+    display: flex; /* Centrar contenido */
+    align-items: center;
+    justify-content: center;
+}
+
+#next-slide-btn:hover {
+    color: #1D3E6E; /* Cambiar el color del ícono al pasar el cursor */
+}
+
+#next-slide-btn i {
+    font-size: 24px; /* Tamaño del ícono */
+    transition: color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+
+#prev-slide-btn {
+    position: relative; /* Alineado dentro del contenedor */
+    background-color: transparent; /* Transparente */
+    color: #2E5790; /* Color del ícono */
+    border: none; /* Sin bordes */
+    padding: 0; /* Sin relleno adicional */
+    cursor: pointer; /* Mano al pasar sobre el botón */
+    height: 100%; /* Ocupa toda la altura del carrusel */
+    width: 40px; /* Más alto que ancho */
+    display: flex; /* Centrar contenido */
+    align-items: center;
+    justify-content: center;
+}
+
+#prev-slide-btn:hover {
+    color: #1D3E6E; /* Cambiar el color del ícono al pasar el cursor */
+}
+
+#prev-slide-btn i {
+    font-size: 24px; /* Tamaño del ícono */
+    transition: color 0.3s ease; /* Suaviza el cambio de color */
+}
 
