@@ -27,7 +27,3 @@ h2 {
     100% { transform: translateX(-1000%); }
 }
 
-button:focus {
-    outline: none;
-  }
-  
