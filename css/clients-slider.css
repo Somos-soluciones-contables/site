@@ -274,10 +274,10 @@
     }
 }    
 
-@media (max-width: 358px) {  
+/* @media (max-width: 358px) {  
 
     #custom-slider::after {
-        width: 20px; /* Ancho del área de desvanecimiento */
+        width: 20px; 
 
     }
-}    
+}     */
