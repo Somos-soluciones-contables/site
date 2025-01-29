@@ -207,6 +207,13 @@
     outline: none;  /* blabla */
 }
 
+#prev-slide-btn:focus, 
+#next-slide-btn:focus {
+    outline: none;
+    color: #ffc400;
+}
+
+
 #prev-slide-btn:hover, #next-slide-btn:hover {
     color: white;
     background-color: #006affbb;
