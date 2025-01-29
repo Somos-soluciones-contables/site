@@ -264,20 +264,19 @@
         width: 20px; /* Ancho del área de desvanecimiento */
 
     }
+
+    #carrusel {
+        padding-left: 5px; 
+        padding-right: 5px;  
+    } 
+      
 }    
 
 @media (max-width: 520px) {  
 
     #custom-slider::after {
-        width: 50px; /* Ancho del área de desvanecimiento */
+        width: 5px; /* Ancho del área de desvanecimiento */
 
     }
 }    
 
-/* @media (max-width: 358px) {  
-
-    #custom-slider::after {
-        width: 20px; 
-
-    }
-}     */
