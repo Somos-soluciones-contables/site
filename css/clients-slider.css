@@ -204,15 +204,7 @@
     justify-content: center;
     border-radius: 100%;
     margin: 0 5px;
-    outline: none;  /* blabla */
 }
-
-#prev-slide-btn:focus, 
-#next-slide-btn:focus {
-    outline: none;
-    color: #ffc400;
-}
-
 
 #prev-slide-btn:hover, #next-slide-btn:hover {
     color: white;

@@ -11,6 +11,10 @@ body {
     padding: 0;
 }
 
+*:focus {
+    outline: none !important;
+}
+
 h1, h2 {
     color: #2e5790;
 }
