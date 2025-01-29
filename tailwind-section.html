@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
       body {
@@ -115,7 +116,6 @@
         }
       }
 
-
     </style>
     <style>
       *, ::before, ::after {
@@ -226,7 +226,6 @@
         --tw-contain-style: ;
       }
     
-      /* TailwindCSS v3.4.16 */
       *, ::after, ::before {
         box-sizing: border-box;
         border-width: 0;
@@ -252,6 +251,26 @@
         margin: 0;
         line-height: inherit;
       }
+
+      @media screen and (max-width: 700px) {
+        .mb-8 {
+            margin-top: 0;
+            margin-bottom: 5px !important;
+        }
+
+        .py-20 {
+            padding-top: 0 !important;
+            padding-bottom: 5px !important;
+        }
+
+        .gap-5 {
+            gap: 0.25rem !important;
+        }
+
+        .min-h-screen {
+            min-height: 90vh;
+        }
+      }      
     </style>
     
   </head>
@@ -264,14 +283,16 @@
           </div>
           <div class="relative lg:pr-52">
             <h2 class="capitalize text-white mb-4 text-2xl xl:text-3xl"><br>Impositivo</h2>
+            <i class="fas fa-balance-scale text-white text-2xl mx-auto"></i>
           </div>
           <div class="icon"></div>
         </div>
         <div class="card bg-[#4e6fa0] p-10 relative">
           <div class="circle">
           </div>
-          <div class="relative lg:pl-48">
+          <div class="relative lg:pl-48 text-right">
             <h2 class="capitalize text-white mb-4 text-2xl xl:text-3xl"><br>Societario </h2>
+            <i class="fas fa-building text-white text-2xl"></i>
           </div>
         </div>
         <div class="card bg-[#4e6fa0] p-10 relative">
@@ -279,13 +300,14 @@
           </div>
           <div class="relative lg:pr-44">
             <h2 class="capitalize text-white mb-4 text-2xl xl:text-3xl"><br>Financiero</h2>
+            <i class="fas fa-chart-line text-white text-2xl mx-auto"></i>
           </div>
         </div>
         <div class="card bg-[#4e6fa0] p-10 relative">
-          <div class="circle">
-          </div>
-          <div class="relative lg:pl-48">
+          <div class="circle"></div>
+          <div class="relative lg:pl-48 text-right">
             <h2 class="capitalize text-white mb-4 text-2xl xl:text-3xl"><br>Laboral</h2>
+            <i class="fas fa-briefcase text-white text-2xl"></i>
           </div>
         </div>
       </div>

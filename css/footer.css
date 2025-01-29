@@ -44,6 +44,7 @@
 .footer-buttons a:hover {
     transform: translateY(-2px);
     background-color: #ffffff00;
+    color: #007bff;
 }
 
 .footer-credits {

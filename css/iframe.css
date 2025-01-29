@@ -5,7 +5,12 @@
   
   @media (max-width: 700px) {
     #responsive-iframe {
-      height: 950px; /* Altura para pantallas medianas */
+      height: 500px; /* Altura para pantallas medianas */
     }
   }
   
+  @media (max-width: 697px) {
+    #responsive-iframe {
+      height: 840px; /* Altura para pantallas medianas */
+    }
+  }  
