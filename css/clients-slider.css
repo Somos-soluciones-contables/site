@@ -275,8 +275,8 @@
 @media (max-width: 520px) {  
 
     #custom-slider::after {
-        width: 5px; /* Ancho del área de desvanecimiento */
+        width: 35px; /* Ancho del área de desvanecimiento */
 
-    }
+    }    
 }    
 
