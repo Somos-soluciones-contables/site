@@ -13,6 +13,15 @@ body {
 
 *:focus {
     outline: none !important;
+    box-shadow: none !important;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent !important; /* Elimina el resaltado celeste */
+}
+
+*:focus-visible {
+    outline:  transparent !important; /* Estilo personalizado para teclado */
 }
 
 h1, h2 {
