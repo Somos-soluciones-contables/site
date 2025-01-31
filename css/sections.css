@@ -37,7 +37,7 @@ section {
 
 .contact {
     padding: 50px 20px 20px 25px;
-    text-align: center;
+    /* text-align: center; */
     background-color: #33639B;
     background-repeat: no-repeat;
     background-position: bottom;
