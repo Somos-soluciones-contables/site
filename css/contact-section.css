@@ -10,9 +10,12 @@
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
     width: 95%;
-    max-width: 900px;
+    height: 100%;
+    max-width: 1000px;
+    max-height: 700px;
     margin: auto;
     margin-right: 10%;
+    margin-left: 5%;
 }
 
 .contact-form-container h3{
@@ -58,9 +61,10 @@
 
 .social-icons-wrapper {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     gap: 15px;
-    margin-top: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .social-icons-wrapper .social-icon {
@@ -136,7 +140,8 @@ input:focus, textarea:focus {
     display: flex;
     align-items: left;
     color: #ffffff;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s;
@@ -147,7 +152,7 @@ input:focus, textarea:focus {
 }
 
 .contact-button:hover {
-    color: #c9c9c9; /* Color al pasar el cursor */
+    font-weight: 650;
 }
 
 button {
@@ -206,7 +211,7 @@ button:active {
 }
 
 textarea {
-    height: 150px;
+    height: 250px;
 }
 
 input:focus + .placeholder,
@@ -265,17 +270,18 @@ textarea:not(:placeholder-shown) + .placeholder {
     }
 
     .social-icons-wrapper {
-        margin-top: 5px;
+        margin-top: 60px;
     }
 
     .empty-column { 
         font-size: 30px;     
-        margin-left: 6%;   
+        margin-left: 3%;   
+        /* padding-bottom: 50px; */
     }      
 
     .contact-title {
-        margin-left: 5%;
-        font-size: 40px; 
+        margin-left: 3%;
+        font-size: 45px; 
     }
 
     button {

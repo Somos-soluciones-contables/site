@@ -3,14 +3,14 @@
     height: 600px; /* Altura por defecto */
   }
   
-  @media (max-width: 700px) {
+  @media (max-width: 1200px) {
     #responsive-iframe {
       height: 500px; /* Altura para pantallas medianas */
     }
   }
   
-  @media (max-width: 697px) {
+  @media (max-width: 700px) {
     #responsive-iframe {
-      height: 840px; /* Altura para pantallas medianas */
+      height: 900px; /* Altura para pantallas medianas */
     }
   }  

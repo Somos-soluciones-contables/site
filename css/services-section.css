@@ -77,23 +77,25 @@
 .icon-container {
   margin-left: 5px;    
   font-size: 40px; 
-  color: #007bff; 
+  
+  color: #2E5790; 
   transition: color 0.3s ease; 
 }
 
 .icon-container:hover {
-  color: #FAB0E3; 
+  color: #007bff; 
   animation: bounce 0.5s ease;
 }
 
 .bullseye-icon {
     margin-left: 5px;
     font-size: 40px; 
-    color: #007bff; 
+    color: #2E5790;      
 }
 
 .bullseye-icon:hover {
-    color: #FAB0E3;  
+    
+    color: #007bff; 
     animation: bounce 0.5s ease;  
 
 }

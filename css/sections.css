@@ -26,6 +26,7 @@ section {
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
+    padding-bottom: 10px;
 }
 
 .section3 {
@@ -48,6 +49,7 @@ section {
 
 .contact  h2{
     color: white;
+    margin-bottom: 50px;
 }
 
 .section1 h1 {
