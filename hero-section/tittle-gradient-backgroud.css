@@ -138,8 +138,8 @@ button:active {
     }	
 
     button {
-        bottom: 15%;
-        right: 15%;
+        bottom: 2.5%;
+        right: 20%;
         padding: 10px 20px;
         border-radius: 200px;
         font-size: 20px
