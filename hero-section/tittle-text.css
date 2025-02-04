@@ -1,0 +1,111 @@
+
+#text-container {
+    display: inline; /* Cambiamos a inline para que los hijos fluyan como texto */
+    max-width: 90vw;
+    width: 100%;
+    position: relative;
+    margin-left: 5%;
+    z-index: 2;
+    margin-bottom: 0px;
+    
+    border-radius: 40px;
+    white-space: normal; /* Permite saltos de línea */
+}
+
+#typing {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 70px;
+    overflow: hidden;
+    white-space: normal; /* Permite saltos de línea */
+    transition: opacity 0.3s ease-in-out;
+    position: relative;
+    left: 0;
+    transform: translateX(0);
+    margin-left: 0;
+    word-wrap: break-word; /* Asegura que las palabras largas también se ajusten */
+    display: inline; /* Hace que el texto fluya correctamente */
+    background-color: white;
+}
+
+#fixed {
+    color: #2E5790;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bolder;
+    font-size: 70px;
+    margin-bottom: 0;
+    z-index: 2;
+    margin-left: 5%;
+    margin-top: 2%;
+    position: relative; 
+}
+
+#dynamic-text {
+    opacity: 1;
+    margin-left: 0px;
+}
+
+#crow {
+    color: #2E5790;
+    font-family: Consolas, monospace;
+    font-weight: 450;
+    font-size: 70px;
+    animation: blink 1s linear infinite;
+    margin-left: 0px;
+    display: inline; /* Hace que el cursor fluya con el texto */
+    vertical-align: bottom; /* Alinea el cursor con la última línea de #typing */
+    background-color: white;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Responsividad adicional */
+@media (max-width: 1300px) {	
+    #text-container {
+        margin-left: 5%;
+    }
+    
+    #fixed {
+        font-size: 50px;
+        margin-left: 5%;
+    }
+    #typing, #crow {
+        font-size: 50px;
+    }
+}
+
+/* Responsividad adicional */
+/* @media (max-width: 1000px) {	
+    #text-container {
+        margin-left: 5%;
+    }
+    
+    #fixed {
+        font-size: 35px;
+        margin-left: 5%;
+    }
+    #typing, #crow {
+        font-size: 35px;
+    }
+} */
+
+/* Responsividad adicional */
+@media (max-width: 500px) {	
+    #text-container {
+        margin-left: 1%;
+    }
+    
+    #fixed {
+        padding-top: 35%;
+        font-size: 35px;
+        margin-left: 1%;
+    }
+
+    #typing, #crow {
+        font-size: 35px;
+    }
+}

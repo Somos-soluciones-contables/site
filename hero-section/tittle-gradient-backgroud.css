@@ -1,0 +1,150 @@
+canvas {
+    --gradient-color-1: #2E5790;
+    --gradient-color-2: #FAB0E3 ;
+    --gradient-color-3: #417abb;
+    --gradient-color-4: #244677 ;
+    position: absolute;
+    top: 0;
+    left: 30%;
+    width: 80%;
+    height: 100%;
+    border-radius: 30% 0 0 30%; 
+    z-index: 0;
+}
+
+/* #gradient-canvas {
+    position: fixed; 
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    z-index: 1;
+} */
+
+
+.gradient-container {
+    position: absolute; /* O usa fixed si prefieres */
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+}
+
+#gradient-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Debe estar detrás de la imagen */
+}
+
+.overlay-image {  
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    width: 850px;
+    height: 850px;
+    transform: translate(-50%, -50%); /* Centra la imagen */
+    z-index: 1; /* Asegura que esté por encima del gradiente */
+
+    opacity: 0;
+}
+
+
+
+button {
+    position: fixed;
+    bottom: 40%;
+    right: 20%;
+    cursor: pointer;
+    font-weight: 400;
+    transition: opacity 1s ease-in-out, visibility 0s linear 1s; /* Añadir transición suave para la opacidad */
+    padding: 25px 45px;
+    border-radius: 200px;
+    background: #1d7bff;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+    z-index: 2;
+    opacity: 0;  /* El botón es invisible inicialmente */
+    visibility: hidden;  /* También aseguramos que no sea visible */
+}
+
+button.visible {
+    opacity: 0.9;  /* Cambia la opacidad a 1 para hacerlo visible */
+    visibility: visible;  /* Hacerlo visible */
+    transition: opacity 1s ease-in-out;  /* La transición solo afecta a la opacidad cuando se hace visible */
+}
+
+button:hover {
+    background: #076eff;
+}
+
+button > svg {
+    width: 50px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover svg {
+    transform: translateX(5px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 1600px) {			
+
+    button {
+        bottom: 40%;
+        right: 5%;
+        padding: 20px 40px;
+        border-radius: 200px;
+        font-size: 30px
+    }
+}	
+
+
+
+@media (max-width: 1000px) {			
+    canvas {
+        position: fixed !important;
+        top: 0 !important;
+        left: 50% !important;
+    }	
+
+    button {
+        bottom: 15%;
+        right: 5%;
+        padding: 10px 20px;
+        border-radius: 200px;
+        font-size: 25px
+    }
+}	
+
+@media (max-width: 400px) {			
+    canvas {
+        top: 0;
+        left: 65% !important;
+        width: 27%;
+        height: 25%;
+        border-radius:60px;
+        z-index: 0; 
+    }	
+
+    button {
+        bottom: 15%;
+        right: 15%;
+        padding: 10px 20px;
+        border-radius: 200px;
+        font-size: 20px
+    }
+    
+
+
+}	

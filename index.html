@@ -57,7 +57,7 @@
             <a href="#contact">Contacto</a>
         </div>
     </div>
-
+    <iframe id="responsive-iframe2" src="./hero-section/index.html" width="100%" height="100%"  frameborder="0" style="overflow: hidden;"></iframe>
     <!-- Sección 1: Nosotros -->
     <section id="section1" class="section1">
         <div class="wrapper">
@@ -354,4 +354,13 @@
         </a>
     </div>
 </body>
+<script>
+    window.addEventListener('message', function(event) {
+      // Verificar que el mensaje sea válido (opcional, si solo esperas este mensaje)
+      if (event.data === 'scrollToSection1') {
+        document.querySelector('#section1').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  </script>
+  
 </html>

@@ -2,6 +2,11 @@
     width: 100%;
     height: 600px; /* Altura por defecto */
   }
+
+  #responsive-iframe2 {
+    width: 100%;
+    height: 850px; /* Altura por defecto */
+  }
   
   @media (max-width: 1200px) {
     #responsive-iframe {
@@ -12,5 +17,11 @@
   @media (max-width: 700px) {
     #responsive-iframe {
       height: 900px; /* Altura para pantallas medianas */
+    }
+  }  
+
+  @media (max-width: 400px) {
+    #responsive-iframe2 {
+      height: 830px; /* Altura para pantallas medianas */
     }
   }  

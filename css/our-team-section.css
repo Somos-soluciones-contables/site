@@ -22,9 +22,9 @@
 .our_team .team_member {
     width: 360px;
     margin: 2px;
-    background: #35343436;
+    background: #2e579069;
     padding: 20px 10px;
-    border-radius: 2%;
+    border-radius: 50px;
 }
 
 .our_team .team_member .member_img {
@@ -45,7 +45,7 @@
 }
 
 .our_team .team_member h3 {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 18px;
     letter-spacing: 2px;
     margin: 15px 0 0px;
@@ -54,14 +54,14 @@
 }
 
 .our_team .team_member span {
-    font-size: 12px;
+    font-size: 13px;
     color: #ffffff;
     font-weight: 800;
 }
 
 .our_team .team_member p {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
     color: #ffffff;
 }

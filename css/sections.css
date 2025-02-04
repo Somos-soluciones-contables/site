@@ -2,7 +2,7 @@
 section {
     color: #2e5790;
     margin: 0; 
-    opacity: 0; /* Inicialmente invisibles */
+    opacity: 0; 
     animation: section-fadeIn 1.5s forwards ease-in-out;
 }
 
@@ -13,7 +13,7 @@ section {
 }
 
 .section1 {
-    background-color: #2E5790;
+    background-color: #33639B;
     background-image: url(../public/components/wave1.svg);
     background-size: cover;
     background-position: bottom;
