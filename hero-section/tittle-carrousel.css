@@ -59,23 +59,38 @@
     }
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .swiper-container {
-        width: 90%;
-        margin-left: 1%;
+        width: 75%;
+        margin-left: 5%;
+        position: fixed;
+        bottom: 22%; 
     }
 }
 
 @media (max-width: 600px) {
     .swiper-container {
         height: 400px;
+        bottom: 18%; 
     }
 }
+
 
 @media (max-width: 525px) {
     .swiper-container {
         height: 300px;
-        width: 95%;
+        width: 85%;
+    }
+}
+@media (max-width: 500px) {
+    .swiper-container {
+        margin-left: 1%;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .swiper-container {
+        height: 270px;
     }
 }

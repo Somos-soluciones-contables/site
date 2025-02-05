@@ -101,8 +101,18 @@
     
     #fixed {
         padding-top: 1%;
-        font-size: 35px;
+
         margin-left: 1%;
+    }
+
+    #typing, #crow {
+
+    }
+}
+
+@media (max-width: 500px) {
+    #fixed {
+        font-size: 35px;
     }
 
     #typing, #crow {

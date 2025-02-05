@@ -40,48 +40,63 @@ canvas {
     z-index: 1; /* Debe estar detrás de la imagen */
 }
 
-.overlay-image {  
+@keyframes fadeScaleRotate {
+    0% { opacity: 0.7; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+    50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.05) rotate(180deg); }
+    100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1) rotate(360deg); }
+}
+
+.overlay-image {
     position: absolute;
     top: 50%;
-    left: 65%;
+    left: 70%;
     width: 850px;
     height: 850px;
-    transform: translate(-50%, -50%); /* Centra la imagen */
-    z-index: 1; /* Asegura que esté por encima del gradiente */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.7;
+    animation: fadeScaleRotate 2s infinite ease-in-out, rotate 120s infinite linear;
+}
 
-    opacity: 0;
+
+@keyframes rotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 
 
 button {
-    position: fixed;
-    bottom: 40%;
-    right: 20%;
+    position: absolute;
+    bottom: 15%;
+    right: 15%;
     cursor: pointer;
     font-weight: 400;
     transition: opacity 1s ease-in-out, visibility 0s linear 1s; /* Añadir transición suave para la opacidad */
-    padding: 25px 45px;
+    padding: 20px 50px;
     border-radius: 200px;
-    background: #1d7bff;
+    background: #2693da;
     border: 1px solid transparent;
     display: flex;
     align-items: center;
-    font-size: 40px;
+    font-size: 50px;
     color: white;
     z-index: 2;
     opacity: 0;  /* El botón es invisible inicialmente */
     visibility: hidden;  /* También aseguramos que no sea visible */
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 button.visible {
-    opacity: 0.9;  /* Cambia la opacidad a 1 para hacerlo visible */
+    opacity: 1;  /* Cambia la opacidad a 1 para hacerlo visible */
     visibility: visible;  /* Hacerlo visible */
     transition: opacity 1s ease-in-out;  /* La transición solo afecta a la opacidad cuando se hace visible */
 }
 
 button:hover {
-    background: #076eff;
+    background: #2eacff;
 }
 
 button > svg {
@@ -100,15 +115,28 @@ button:active {
 
 @media (max-width: 1600px) {			
 
-    button {
+    /* button {
         bottom: 40%;
         right: 5%;
         padding: 20px 40px;
         border-radius: 200px;
         font-size: 30px
+    } */
+
+    button {
+        bottom: 15%;
+
+        font-size: 30px
     }
 }	
 
+@media (max-width: 1287px) {			
+	
+    button {
+        bottom: 10%;
+        right: 2%;
+    }
+}	
 
 
 @media (max-width: 1000px) {			
@@ -127,6 +155,24 @@ button:active {
     }
 }	
 
+@media (max-width: 800px) {			
+    button {
+        bottom: 8%;
+    }
+}	
+
+@media (max-width: 600px) {			
+    button {
+        bottom: 5%;
+    }
+}	
+
+@media (max-width: 500px) {			
+    button {
+        bottom: 3%;
+    }
+}	
+
 @media (max-width: 400px) {			
     canvas {
         top: 0;
@@ -139,7 +185,7 @@ button:active {
 
     button {
         bottom: 2.5%;
-        right: 20%;
+        right: 10%;
         padding: 5px 10px;
         border-radius: 200px;
         font-size: 15px
