@@ -20,6 +20,13 @@
     }
   }  
 
+  @media (max-width: 600px) {
+    #responsive-iframe2 {
+      height: 750px; /* Altura para pantallas medianas */
+    }
+  }  
+
+
   @media (max-width: 400px) {
     #responsive-iframe2 {
       height: 550px; /* Altura para pantallas medianas */
