@@ -7,6 +7,7 @@
     z-index: 2; /* Asegura que esté por encima del gradiente */
     overflow: hidden;
     margin-left: 5%;
+    border-radius: 10%;
 }
 
 /* Estilos para las imágenes del carrusel */
@@ -23,6 +24,7 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 10%;
 }
 
 /* Estilos para los bullets inactivos */
