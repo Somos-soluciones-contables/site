@@ -29,6 +29,6 @@
 
   @media (max-width: 513px) {
     #responsive-iframe2 {
-      height: 550px; /* Altura para pantallas medianas */
+      height: 80vh; /* Altura para pantallas medianas */
     }
   }  
