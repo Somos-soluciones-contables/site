@@ -1,7 +1,7 @@
 /* Contenedor principal del botón */
 .back-to-top {
   position: fixed;
-  bottom: 10px;
+  bottom: 3px;
   right: 5px;
   z-index: 1000;
   width: 60px;
