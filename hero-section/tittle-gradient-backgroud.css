@@ -69,7 +69,7 @@ canvas {
 button {
     position: absolute;
     bottom: 15%;
-    right: 15%;
+    right: 19%;
     cursor: pointer;
     font-weight: 400;
     transition: opacity 1s ease-in-out, visibility 0s linear 1s; /* Añadir transición suave para la opacidad */
@@ -79,7 +79,7 @@ button {
     border: 1px solid transparent;
     display: flex;
     align-items: center;
-    font-size: 50px;
+    font-size: 30px;
     color: white;
     z-index: 2;
     opacity: 0;  /* El botón es invisible inicialmente */
