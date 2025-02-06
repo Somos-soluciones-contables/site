@@ -26,6 +26,7 @@
     word-wrap: break-word; /* Asegura que las palabras largas también se ajusten */
     display: inline; /* Hace que el texto fluya correctamente */
     background-color: white;
+    border-radius: 10px;
 }
 
 #fixed {
@@ -54,7 +55,9 @@
     margin-left: 0px;
     display: inline; /* Hace que el cursor fluya con el texto */
     vertical-align: bottom; /* Alinea el cursor con la última línea de #typing */
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
+    opacity: 0;
+    color: rgba(255, 255, 255, 0);
 }
 
 @keyframes blink {
@@ -63,59 +66,33 @@
     100% { opacity: 1; }
 }
 
-/* Responsividad adicional */
-@media (max-width: 1300px) {	
-    #text-container {
-        margin-left: 5%;
-    }
-    
+/* Si el ancho es mayor a 1300px */
+@media (min-width: 1301px) {
     #fixed {
-        font-size: 50px;
-        margin-left: 5%;
+        font-size: 70px;
     }
     #typing, #crow {
-        font-size: 50px;
+        font-size: 70px;
     }
 }
 
-/* Responsividad adicional */
-/* @media (max-width: 1000px) {	
-    #text-container {
-        margin-left: 5%;
-    }
-    
+/* Si el ancho es menor a 1300px y la altura es mayor a 700px */
+@media (max-width: 1300px) and (min-height: 701px) {
     #fixed {
-        font-size: 35px;
-        margin-left: 5%;
+        font-size: 45px;
     }
     #typing, #crow {
-        font-size: 35px;
-    }
-} */
-
-/* Responsividad adicional */
-@media (max-width: 500px) {	
-    #text-container {
-        margin-left: 1%;
-    }
-    
-    #fixed {
-        padding-top: 1%;
-
-        margin-left: 1%;
-    }
-
-    #typing, #crow {
-
+        font-size: 45px;
     }
 }
 
-@media (max-width: 500px) {
+/* Si el ancho es menor a 1300px y la altura es menor o igual a 700px */
+@media (max-width: 1300px) and (max-height: 700px) {
     #fixed {
         font-size: 35px;
     }
-
     #typing, #crow {
         font-size: 35px;
     }
 }
+

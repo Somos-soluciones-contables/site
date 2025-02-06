@@ -1,5 +1,5 @@
 
-const words = ["Asesoramiento personalizado.", "Estrategia y planificación.", "Crecimiento para tu empresa.", "Soluciones Contables."];
+const words = ["Asesoramiento personalizado. ", "Estrategia y planificación. ", "Crecimiento para tu empresa. ", "Soluciones Contables. "];
 let index = 0;
 const textElement = document.getElementById("dynamic-text");
 
@@ -8,23 +8,34 @@ function typeEffect(word, callback) {
     textElement.innerHTML = "";
     textElement.style.opacity = 1;
 
-    if (word === "Acompañamiento.") {
-        textElement.style.color = "#fab0e3";
-    } else if (word === "Soluciones Contables.") {
-        textElement.style.color = "#2E5790";
-        
-    } else {
-        textElement.style.color = "#fab0e3";
-    }
-
-    function typeLetter() {
+    function typeLetter() { 
+        if (i === 0) { // Solo cambiar estilo antes de empezar a escribir
+            if (word.trim() === "Soluciones Contables.") {
+                textElement.style.color = "#2E5790";
+                
+                // Obtener tamaño actual de la fuente y aumentar un 5%
+                let currentSize = parseFloat(window.getComputedStyle(textElement).fontSize);
+                textElement.style.fontSize = (currentSize * 1.05) + "px";
+    
+                // Obtener peso actual de la fuente y aumentar un 5%
+                let currentWeight = parseFloat(window.getComputedStyle(textElement).fontWeight) || 400; // Por defecto 400 si no tiene peso definido
+                textElement.style.fontWeight = Math.min(currentWeight * 1.05, 900); // Máximo 900 para evitar excesos
+    
+                // Aplicar transición suave
+                textElement.style.transition = "all 0.5s ease";
+            } else {
+                textElement.style.color = "#fab0e3";
+                textElement.style.fontSize = ""; // Mantener tamaño original
+                textElement.style.fontWeight = ""; // Mantener peso original
+            }
+        }
+    
         if (i < word.length) {
             textElement.innerHTML += word[i];
             i++;
-            setTimeout(typeLetter, Math.random() * (60 - 30) + 30); // Ajuste para escribir más rápido
+            setTimeout(typeLetter, Math.random() * (60 - 30) + 30);
         } else {
-            let waitTime = (word === "Soluciones Contables.") ?  60000 : 1000; // Tiempo de espera tras completar la palabra
-
+            let waitTime = (word === "Soluciones Contables.") ? 60000 : 1000;
             setTimeout(() => {
                 if (index < words.length - 1) {
                     eraseEffect(callback);
@@ -37,6 +48,8 @@ function typeEffect(word, callback) {
             }, waitTime);
         }
     }
+    
+    
     typeLetter();
 }
 

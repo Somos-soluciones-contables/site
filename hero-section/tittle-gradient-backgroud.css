@@ -50,8 +50,8 @@ canvas {
     position: absolute;
     top: 50%;
     left: 70%;
-    width: 850px;
-    height: 850px;
+    width: 1850px;
+    height: 1850px;
     transform: translate(-50%, -50%);
     z-index: 1;
     opacity: 0.7;
@@ -68,61 +68,61 @@ canvas {
 
 button {
     position: absolute;
-    bottom: 15%;
+    bottom: 40%;
     right: 19%;
     cursor: pointer;
     font-weight: 400;
-    transition: opacity 1s ease-in-out, visibility 0s linear 1s; /* Añadir transición suave para la opacidad */
+    transition: opacity 1s ease-in-out, visibility 0s linear 1s;
     padding: 20px 50px;
     border-radius: 200px;
-    background: #2693da;
+    background: #388FC8;
     border: 1px solid transparent;
     display: flex;
     align-items: center;
     font-size: 30px;
     color: white;
     z-index: 2;
-    opacity: 0;  /* El botón es invisible inicialmente */
-    visibility: hidden;  /* También aseguramos que no sea visible */
+    opacity: 0;
+    visibility: hidden;
     outline: none;
     box-shadow: none;
     -webkit-tap-highlight-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Sombra en el borde */
+}
+
+button svg {
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3)); /* Sombra en el SVG */
 }
 
 button.visible {
-    opacity: 1;  /* Cambia la opacidad a 1 para hacerlo visible */
-    visibility: visible;  /* Hacerlo visible */
-    transition: opacity 1s ease-in-out;  /* La transición solo afecta a la opacidad cuando se hace visible */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out;
 }
 
 button:hover {
-    background: #2eacff;
+    background: #ffffff;
+    color: #388FC8;
 }
 
 button > svg {
     width: 50px;
     margin-left: 10px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
 }
 
 button:hover svg {
     transform: translateX(5px);
+    fill: #388FC8; 
 }
 
 button:active {
     transform: scale(0.95);
 }
 
+
 @media (max-width: 1600px) {			
-
-    /* button {
-        bottom: 40%;
-        right: 5%;
-        padding: 20px 40px;
-        border-radius: 200px;
-        font-size: 30px
-    } */
-
     button {
         bottom: 15%;
 
@@ -136,6 +136,15 @@ button:active {
         bottom: 10%;
         right: 2%;
     }
+
+    .overlay-image {
+
+        width: 1550px;
+        height: 1550px;
+
+    }
+    
+    
 }	
 
 

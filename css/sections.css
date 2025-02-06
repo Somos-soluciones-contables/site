@@ -6,7 +6,7 @@ section {
     animation: section-fadeIn 1.5s forwards ease-in-out;
 }
 
-.section1, .section2, .section3 {
+.section1, .section2, .clients {
     padding: 50px 20px;
     text-align: center;
     background-color: #ffffff;
@@ -29,7 +29,7 @@ section {
     padding-bottom: 10px;
 }
 
-.section3 {
+.clients {
     color: #33639B;
     background-position: top;
     /* background-color: #ffffff; */
@@ -71,7 +71,7 @@ section {
     /* margin-top: 10px; */
 }
 
-.section3 h1 {
+.clients h1 {
     padding-top: 40px;
     font-size: 60px;
     margin-bottom: 60px;
@@ -83,7 +83,7 @@ section {
 }
 
 @media (max-width: 520px) {
-    .section3 h1 {
+    .clients h1 {
         font-size: 40px;
     }
 }

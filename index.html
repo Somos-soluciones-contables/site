@@ -19,11 +19,11 @@
     <link rel="stylesheet" href="css/services-section.css">
     <link rel="stylesheet" href="css/our-team-section.css">
     <link rel="stylesheet" href="css/contact-section.css">
-    <link rel="stylesheet" href="css/floating-whatsapp-button.css">
-    <link rel="stylesheet" href="css/back-to-top-button.css">  
+
     <link rel="stylesheet" href="css/iframe.css"> 
     <link rel="stylesheet" href="css/clients-slider.css"> 
-    <link rel="stylesheet" href="css/where-are-we-section.css"> 
+    <link rel="stylesheet" href="css/contact-map.css"> 
+    <link rel="stylesheet" href="css/side-floating-buttons.css">
 
     <!-- Scripts -->
     <script src="js/back-to-top-button.js" defer></script>  
@@ -47,17 +47,17 @@
         <div class="menu" id="menu">
             <a href="#section1">Nosotros</a>
             <a href="#section2">Servicios</a>
-            <a href="#section3">Clientes</a>
+            <a href="#clients">Clientes</a>
             <a href="#contact">Contacto</a>
         </div>
         <div class="toggle-menu">
             <a href="#section1">Nosotros</a>
             <a href="#section2">Servicios</a>
-            <a href="#section3">Clientes</a>
+            <a href="#clients">Clientes</a>
             <a href="#contact">Contacto</a>
         </div>
     </div>
-    <iframe id="responsive-iframe2" src="./hero-section/index.html" width="100%" height="100%"  frameborder="0" style="overflow: hidden;"></iframe>
+    <iframe id="responsive-iframe2" src="./hero-section/hero-section.html" width="100%" height="100%"  frameborder="0" style="overflow: hidden;"></iframe>
     <!-- Sección 1: Nosotros -->
     <section id="section1" class="section1">
         <div class="wrapper">
@@ -144,22 +144,6 @@
                         <div class="icon-text">
                             <p>Nuestro objetivo es la prevención y detección de los fraudes antes de que lleguen a concretarse. Buscamos agregar valor a la empresa a través de una mejora continua en los procesos, mejorando los controles internos en cada área.</p>
                         </div>
-                        <!-- <div class="icon-text">
-                            <div class="bullseye-icon">
-                                <i class="fa-solid fa-list-check"></i>
-                            </div>  
-                        </div>
-                        <div class="icon-text">
-                            <div>
-                                <h3>Áreas a mejorar: <br><br></h3>
-                                <p>- Compras y cuentas por pagar <br>
-                                    - Disponibilidades: caja y bancos. <br>
-                                    - Inventarios. <br>
-                                    - Cuentas por cobrar. <br>
-                                    - Viaticos. <br>
-                                </p>
-                            </div>
-                        </div>         -->
                         <div class="icon-text">
                             <div class="bullseye-icon">
                                 <i class="fa-solid fa-list-check"></i>
@@ -189,24 +173,6 @@
                             - Pruebas de auditoria (arqueos de caja sorpresivos, conciliaciones bancarias, controles de stock, obtención de confirmación de saldos por parte de clientes/proveedores etc.).<br>
                             - Elaboración de informe final, con las conclusiones y propuestas de mejora.
                         </p>
-                        <!-- <div class="icon-text">
-                            <div class="icon-container">
-                                <i class="fa-regular fa-lightbulb"></i>
-                                <i class="fa-solid fa-lightbulb" style="display: none;"></i>
-                            </div>                            
-                        </div>                          
-                        <div class="icon-text">
-                            <div>
-                                <h3>Como lo logramos? <br><br></h3>
-                                <p> - Entrevistas con el personal clave interviniente en los procesos.<br>
-                                    - Relevamiento de documentación vinculada con las operaciones.<br>
-                                    - Pruebas al sistema de gestión (software).<br>
-                                    - Análisis de fortalezas y debilidades de los procesos, puntos de control interno.<br>
-                                    - Pruebas de auditoria (arqueos de caja sorpresivos, conciliaciones bancarias, controles de stock, obtención de confirmación de saldos por parte de clientes/proveedores etc.).<br>
-                                    - Elaboración de informe final, con las conclusiones y propuestas de mejora.
-                                </p>
-                            </div>
-                        </div>                               -->
                     </div>
                 </div>
                 <!-- Segunda Fila -->
@@ -225,137 +191,137 @@
         <iframe id="responsive-iframe" src="tailwind-section.html" width="100%" frameborder="0" style="overflow: hidden;"></iframe>
     </section>
 
-    <section id="section3" class="section3">
+    <section id="clients" class="clients">
         <h1>Confian en nosotros</h1>
         <div id="carrusel">
             <button id="prev-slide-btn">
                 <i class="fas fa-chevron-left"></i>
             </button>  
-            <div id="custom-slider">
-                <div id="custom-slide-track">
-                    <div class="custom-slide img-1">
+            <div id="clients-slider">
+                <div id="clients-slide-track">
+                    <div class="client-slide img-1">
                         <a href="https://www.maniking.com.ar/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/maniKing1.jpg" alt="ManiKing">
+                            <img src="public/components/clients-logos/maniKing1.jpg" alt="ManiKing">
                         </a>
                     </div>
-                    <div class="custom-slide img-2">
+                    <div class="client-slide img-2">
                         <a href="https://www.prodeman.com/es/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/prodeman1.png" alt="Prodeman">
+                            <img src="public/components/clients-logos/prodeman1.png" alt="Prodeman">
                         </a>
                     </div>
-                    <div class="custom-slide img-3">
+                    <div class="client-slide img-3">
                         <a href="https://www.venex.com.ar" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/venex.png" alt="Venex">
+                            <img src="public/components/clients-logos/venex.png" alt="Venex">
                         </a>
                     </div>
-                    <div class="custom-slide img-4">
+                    <div class="client-slide img-4">
                         <a href="https://www.abastovirtual.com/productos/verduleria" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/abasto.png" alt="Abasto">
+                            <img src="public/components/clients-logos/abasto.png" alt="Abasto">
                         </a>
                     </div>
-                    <div class="custom-slide img-5">
+                    <div class="client-slide img-5">
                         <a href="https://tubojet.com/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/tubo.png" alt="TuboJet">
+                            <img src="public/components/clients-logos/tubo.png" alt="TuboJet">
                         </a>
                     </div>
-                    <div class="custom-slide img-6">
+                    <div class="client-slide img-6">
                         <a href="https://modernia.com.ar/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/modernia1.png" alt="Modernia">
+                            <img src="public/components/clients-logos/modernia1.png" alt="Modernia">
                         </a>
                     </div>
-                    <div class="custom-slide img-7">
+                    <div class="client-slide img-7">
                         <a href="https://www.cafedebarrio.com.ar/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/cafeDeBarrio1.jpg" alt="Cafe De Barrio">
+                            <img src="public/components/clients-logos/cafeDeBarrio1.jpg" alt="Cafe De Barrio">
                         </a>
                     </div>
-                    <div class="custom-slide img-8">
+                    <div class="client-slide img-8">
                         <a href="https://picadamix.com.ar/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/picadaMix1.png" alt="Picada Mix">
+                            <img src="public/components/clients-logos/picadaMix1.png" alt="Picada Mix">
                         </a>
                     </div>
-                    <div class="custom-slide img-9">
+                    <div class="client-slide img-9">
                         <a href="https://www.fulltechnology.com.ar/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/fulltec1.png" alt="Full Technology">
+                            <img src="public/components/clients-logos/fulltec1.png" alt="Full Technology">
                         </a>
                     </div>
-                    <div class="custom-slide img-10">
+                    <div class="client-slide img-10">
                         <a href="https://www.instagram.com/mercadocentralcordoba" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/mercadoCentral1.jpg" alt="Mercado Central">
+                            <img src="public/components/clients-logos/mercadoCentral1.jpg" alt="Mercado Central">
                         </a>
                     </div>                    
-                    <div class="custom-slide img-11">
+                    <div class="client-slide img-11">
                         <a href="https://www.sistemadefijaciones.com.ar/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/sistemaFijaciones1.jpg" alt="Sistema de fijaciones">
+                            <img src="public/components/clients-logos/sistemaFijaciones1.jpg" alt="Sistema de fijaciones">
                         </a>
                     </div>
-                    <div class="custom-slide img-12">
+                    <div class="client-slide img-12">
                         <a href="https://icor.com.ar/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/icor1.png" alt="ICOR">
+                            <img src="public/components/clients-logos/icor1.png" alt="ICOR">
                         </a>
                     </div>     
-                    <div class="custom-slide img-13">
+                    <div class="client-slide img-13">
                         <a href="https://autoalem.com.ar/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/autoAlem1.png" alt="Auto Alem">
+                            <img src="public/components/clients-logos/autoAlem1.png" alt="Auto Alem">
                         </a>
                     </div>     
-                    <div class="custom-slide img-14">
+                    <div class="client-slide img-14">
                         <a href="https://avilasoto.com/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/avilasoto1.png" alt="Avila Soto Group">
+                            <img src="public/components/clients-logos/avilasoto1.png" alt="Avila Soto Group">
                         </a>
                     </div>     
-                    <div class="custom-slide img-15">
+                    <div class="client-slide img-15">
                         <a href="https://www.instagram.com/nb.distribuidora.cba/?hl=es" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/nbDistribuidora1.png" alt="NB Distribuidora">
+                            <img src="public/components/clients-logos/nbDistribuidora1.png" alt="NB Distribuidora">
                         </a>
                     </div>     
-                    <div class="custom-slide img-16">
+                    <div class="client-slide img-16">
                         <a href="https://www.bateriasbat-her.com.ar/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/batHer1.png" alt="Bat-Her">
+                            <img src="public/components/clients-logos/batHer1.png" alt="Bat-Her">
                         </a>
                     </div>     
-                    <div class="custom-slide img-17">
+                    <div class="client-slide img-17">
                         <a href="https://www.lozaordano.com.ar/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/lozaOrdano1.png" alt="Loza Ordano">
+                            <img src="public/components/clients-logos/lozaOrdano1.png" alt="Loza Ordano">
                         </a>
                     </div>     
-                    <div class="custom-slide img-18">
+                    <div class="client-slide img-18">
                         <a href="https://www.surban.com.ar/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/surban.png" alt="Surban negocions inmobiliarios">
+                            <img src="public/components/clients-logos/surban.png" alt="Surban negocions inmobiliarios">
                         </a>
                     </div>     
-                    <div class="custom-slide img-19">
+                    <div class="client-slide img-19">
                         <a href="https://equilibriosport.com/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/equilibrioSports.png" alt="Equilibrio Sport">
+                            <img src="public/components/clients-logos/equilibrioSports.png" alt="Equilibrio Sport">
                         </a>
                     </div>     
-                    <div class="custom-slide img-20">
+                    <div class="client-slide img-20">
                         <a href="https://www.instagram.com/apicola_jauregui/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/apicola.png" alt="Apicola Jauregui">
+                            <img src="public/components/clients-logos/apicola.png" alt="Apicola Jauregui">
                         </a>
                     </div>     
-                    <div class="custom-slide img-21">
+                    <div class="client-slide img-21">
                         <a href="https://www.estudioanimo.tv/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/animo.png" alt="Estudio Ánimo">
+                            <img src="public/components/clients-logos/animo.png" alt="Estudio Ánimo">
                         </a>
                     </div>     
-                    <div class="custom-slide img-22">
+                    <div class="client-slide img-22">
                         <a href="https://www.mayoristas.happylife.com.ar/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/happyLife.png" alt="Happy Life">
+                            <img src="public/components/clients-logos/happyLife.png" alt="Happy Life">
                         </a>
                     </div>     
-                    <div class="custom-slide img-23">
+                    <div class="client-slide img-23">
                         <a href="https://odonuevacordoba.com.ar/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/odontay1.png" alt="Odontología Nueva Cordoba">
+                            <img src="public/components/clients-logos/odontay1.png" alt="Odontología Nueva Cordoba">
                         </a>
                     </div>     
-                    <div class="custom-slide img-24">
+                    <div class="client-slide img-24">
                         <a href="https://www.instagram.com/salvatorebarberia1/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/salvatore.png" alt="Salvatore Barberia">
+                            <img src="public/components/clients-logos/salvatore.png" alt="Salvatore Barberia">
                         </a>
                     </div>     
-                    <div class="custom-slide img-25">
+                    <div class="client-slide img-25">
                         <a href="https://www.instagram.com/surbanautomotores/" target="_blank" rel="noopener noreferrer">
-                            <img src="public/custom-slider/surbanauto.png" alt="Surban Automotores">
+                            <img src="public/components/clients-logos/surbanauto.png" alt="Surban Automotores">
                         </a>
                     </div>                                                                                                                                                                                                                                                                                                                      
                 </div>
@@ -369,23 +335,20 @@
     <!-- Sección 4  Contacto-->
     <section id="contact" class="contact"> 
         <h2 class="contact-title">Contacto</h2> 
-        <!-- Contenedor del mapa -->
-
         <div class="contact-container">
-            <div class="empty-column"> 
-              
+            <div class="contact-data">        
                 <div class="contact-buttons">
-                    <div class="contact-label"> <i class="fa-solid fa-mobile-screen-button"></i> &nbsp;&nbsp;Teléfono:</div>
+                    <div class="contact-label"> <i class="fa-solid fa-mobile-screen-button"></i> Teléfono:</div>
                     <a href="tel:0351315990206" class="contact-button">
                        0351-315990206
                     </a>                       
-                    <div class="contact-label"> <i class="fa-solid fa-envelope-open-text"></i>&nbsp;&nbsp;Mail:</div>
+                    <div class="contact-label"> <i class="fa-solid fa-envelope-open-text"></i> Mail:</div>
                     <a href="mailto:estudio@somos-sc.com.ar" class="contact-button">
                         estudio@somos-sc.com.ar
                     </a>
-                    <div class="contact-label"> <i class="fa-solid fa-location-dot" style="color: #ff6161;"></i>&nbsp;&nbsp;Dirección: </div>
+                    <div class="contact-label"> <i class="fa-solid fa-location-dot location-i-color"></i> Dirección:</div>
                     <a href="https://maps.app.goo.gl/mstbw2HZwWEY1XUP6" class="contact-button" target="_blank" rel="noopener noreferrer">
-                       Esquiú 62 (Sonoma Office), Oficina 211, B° General Paz, Cordoba.
+                       Esquiú 62 (Sonoma Office), Oficina 211, B° General Paz, Córdoba.
                     </a>                 
                 </div>                
                 <div class="map-container">
@@ -446,7 +409,7 @@
             <div class="footer-buttons">
                 <a href="#section1">Nosotros</a>
                 <a href="#section2">Servicios</a>
-                <a href="#section3">Clientes</a>
+                <a href="#clients">Clientes</a>
                 <a href="#contact">Contacto</a>
             </div>
             <div class="footer-credits">
@@ -466,8 +429,8 @@
         </a>
     </div>
      <!-- Botón flotante back to top -->
-    <div class="back-to-top" id="backToTop">
-        <a href="#top" class="back-to-top-link" aria-label="Back to top">
+    <div class="back-to-top-container" id="backToTop">
+        <a href="#top" class="back-to-top-button" aria-label="Back to top">
             <i class="fa-solid fa-chevron-up"></i>
         </a>
     </div>

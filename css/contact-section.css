@@ -1,3 +1,10 @@
+.contact-title {
+    margin-left: 10%;
+    margin-top: 40px;
+    font-size: 60px;
+    font-weight: 300;
+}
+
 /* Estilos del formulario de contacto */
 .contact-container {
     display: flex;
@@ -49,7 +56,7 @@
     flex: 2;
 }
 
-.empty-column {
+.contact-data {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -148,7 +155,7 @@ input:focus, textarea:focus {
 }
 
 .contact-button i {
-    margin-right: 8px; /* Espaciado entre el icono y el texto */
+    margin-right: 8px;
 }
 
 .contact-button:hover {
@@ -171,26 +178,30 @@ button {
 }
 
 button:hover {
-    background-color: #ffffff; /* Color al pasar el ratón */
-    transform: scale(1.05); /* Efecto de aumento al pasar el cursor */
+    background-color: #ffffff; 
+    transform: scale(1.05);
     color: #2E5790;
 }
 
 button:active {
-    transform: scale(0.95); /* Efecto de contracción al hacer clic */
+    transform: scale(0.95); 
 }
 
-.contact-title {
-    margin-left: 10%;
-    margin-top: 40px;
-    font-size: 60px;
-    font-weight: 300;
-}
+
 
 .contact-label {
     font-size: 18px;
     font-weight: 500;
     text-align: left;
+}
+
+.contact-label i {
+    margin-right: 10px; /* Ajusta el valor según lo que necesites */
+  }
+  
+
+.location-i-color {
+    color: #ff6161;
 }
 
 .input-row {
@@ -236,6 +247,12 @@ textarea:not(:placeholder-shown) + .placeholder {
 }
 
 @media (max-width: 900px) {
+
+    .contact-title {
+        margin-left: 3%;
+        font-size: 45px; 
+    }
+
     .contact-container {
         flex-direction: column; 
     }
@@ -275,16 +292,11 @@ textarea:not(:placeholder-shown) + .placeholder {
         justify-content: left;       
     }
 
-    .empty-column { 
+    .contact-data { 
         font-size: 30px;     
         margin-left: 3%;   
         /* padding-bottom: 50px; */
     }      
-
-    .contact-title {
-        margin-left: 3%;
-        font-size: 45px; 
-    }
 
     button {
         width: 40%; 
