@@ -5,22 +5,11 @@ canvas {
     --gradient-color-4: #244677 ;
     position: absolute;
     top: 0;
-    left: 30%;
-    width: 80%;
+
     height: 100%;
     border-radius: 30% 0 0 30%; 
     z-index: 0;
 }
-
-/* #gradient-canvas {
-    position: fixed; 
-    top: 0;
-    right: 0;
-    width: 80%;
-    height: 100vh;
-    z-index: 1;
-} */
-
 
 .gradient-container {
     position: absolute; /* O usa fixed si prefieres */

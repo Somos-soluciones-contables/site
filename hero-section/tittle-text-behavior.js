@@ -13,10 +13,6 @@ function typeEffect(word, callback) {
             if (word.trim() === "Soluciones Contables.") {
                 textElement.style.color = "#2E5790";
                 
-                // Obtener tamaño actual de la fuente y aumentar un 5%
-                let currentSize = parseFloat(window.getComputedStyle(textElement).fontSize);
-                textElement.style.fontSize = (currentSize * 1.05) + "px";
-    
                 // Obtener peso actual de la fuente y aumentar un 5%
                 let currentWeight = parseFloat(window.getComputedStyle(textElement).fontWeight) || 400; // Por defecto 400 si no tiene peso definido
                 textElement.style.fontWeight = Math.min(currentWeight * 1.05, 900); // Máximo 900 para evitar excesos

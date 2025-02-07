@@ -8,7 +8,7 @@
     z-index: 2;
     margin-bottom: 0px;
     
-    border-radius: 40px;
+    border-radius: 10px;
     white-space: normal; /* Permite saltos de línea */
 }
 
@@ -27,6 +27,9 @@
     display: inline; /* Hace que el texto fluya correctamente */
     background-color: white;
     border-radius: 10px;
+    box-decoration-break: clone; /* Aplica el borde a cada línea */
+    -webkit-box-decoration-break: clone; /* Soporte para navegadores WebKit */
+    padding-right: 5px;
 }
 
 #fixed {
@@ -47,17 +50,10 @@
 }
 
 #crow {
-    color: #2E5790;
-    font-family: Consolas, monospace;
-    font-weight: 450;
-    font-size: 70px;
-    animation: blink 1s linear infinite;
     margin-left: 0px;
     display: inline; /* Hace que el cursor fluya con el texto */
     vertical-align: bottom; /* Alinea el cursor con la última línea de #typing */
-    background-color: rgba(255, 255, 255, 0);
     opacity: 0;
-    color: rgba(255, 255, 255, 0);
 }
 
 @keyframes blink {
@@ -71,7 +67,7 @@
     #fixed {
         font-size: 70px;
     }
-    #typing, #crow {
+    #typing {
         font-size: 70px;
     }
 }
@@ -81,7 +77,7 @@
     #fixed {
         font-size: 45px;
     }
-    #typing, #crow {
+    #typing {
         font-size: 45px;
     }
 }
@@ -91,7 +87,7 @@
     #fixed {
         font-size: 35px;
     }
-    #typing, #crow {
+    #typing{
         font-size: 35px;
     }
 }
