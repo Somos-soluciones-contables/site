@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevButton = document.getElementById("prev-slide-btn");
     const nextButton = document.getElementById("next-slide-btn");
     const slides = document.querySelectorAll(".client-slide");
-    const slideWidth = slides[0].offsetWidth + 48; // Ancho de la imagen + gap
+    const slideWidth = slides[0].offsetWidth + 48; 
     let isTransitioning = false;
     let autoSlideInterval;
 
@@ -12,21 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         isTransitioning = true;
 
-        // Mueve el último slide al principio
         const lastSlide = sliderTrack.lastElementChild;
         sliderTrack.insertBefore(lastSlide, sliderTrack.firstChild);
 
-        // Ajusta la posición sin animación
         sliderTrack.style.transition = "none";
         sliderTrack.style.transform = `translateX(-${slideWidth}px)`;
 
-        // Aplica la animación
         requestAnimationFrame(() => {
             sliderTrack.style.transition = "transform 0.6s ease-in-out";
             sliderTrack.style.transform = "translateX(0)";
         });
 
-        // Restablece el estado después de la transición
         sliderTrack.addEventListener(
             "transitionend",
             () => {
@@ -41,11 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         isTransitioning = true;
 
-        // Aplica la animación
         sliderTrack.style.transition = "transform 0.6s ease-in-out";
         sliderTrack.style.transform = `translateX(-${slideWidth}px)`;
 
-        // Restablece la posición después de la transición
         sliderTrack.addEventListener(
             "transitionend",
             () => {
@@ -61,14 +55,13 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const startAutoSlide = () => {
-        autoSlideInterval = setInterval(moveToNextSlide, 2000); // Mueve el slider cada 3 segundos
+        autoSlideInterval = setInterval(moveToNextSlide, 2000); 
     };
 
     const stopAutoSlide = () => {
         clearInterval(autoSlideInterval);
     };
 
-    // Eventos para los botones de navegación
     prevButton.addEventListener("click", () => {
         stopAutoSlide();
         moveToPrevSlide();
@@ -81,10 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
         startAutoSlide();
     });
 
-    // Iniciar el movimiento automático al cargar la página
     startAutoSlide();
 
-    // Detener el movimiento automático cuando el slider recibe focus
     sliderTrack.addEventListener("mouseenter", stopAutoSlide);
     sliderTrack.addEventListener("mouseleave", startAutoSlide);
 });

@@ -9,20 +9,17 @@ function typeEffect(word, callback) {
     textElement.style.opacity = 1;
 
     function typeLetter() { 
-        if (i === 0) { // Solo cambiar estilo antes de empezar a escribir
+        if (i === 0) { 
             if (word.trim() === "Soluciones Contables.") {
                 textElement.style.color = "#2E5790";
                 
-                // Obtener peso actual de la fuente y aumentar un 5%
-                let currentWeight = parseFloat(window.getComputedStyle(textElement).fontWeight) || 400; // Por defecto 400 si no tiene peso definido
-                textElement.style.fontWeight = Math.min(currentWeight * 1.05, 900); // Máximo 900 para evitar excesos
+                let currentWeight = parseFloat(window.getComputedStyle(textElement).fontWeight) || 400; 
+                textElement.style.fontWeight = Math.min(currentWeight * 1.05, 900); 
     
-                // Aplicar transición suave
                 textElement.style.transition = "all 0.5s ease";
             } else {
                 textElement.style.color = "#fab0e3";
-                textElement.style.fontSize = ""; // Mantener tamaño original
-                textElement.style.fontWeight = ""; // Mantener peso original
+                textElement.style.fontWeight = ""; 
             }
         }
     
@@ -44,8 +41,7 @@ function typeEffect(word, callback) {
             }, waitTime);
         }
     }
-    
-    
+
     typeLetter();
 }
 
@@ -57,7 +53,7 @@ function eraseEffect(callback) {
     function eraseLetter() {
         if (i > 0) {
             textElement.innerHTML = word.substring(0, --i);
-            setTimeout(eraseLetter, Math.random() * (40 - 20) + 20); // Ajuste para borrar más rápido
+            setTimeout(eraseLetter, Math.random() * (40 - 20) + 20); 
         } else {
             textElement.style.opacity = 1;
             setTimeout(callback, 300);
@@ -72,6 +68,15 @@ function cycleText() {
         cycleText();
     });
 }
-
 cycleText();
 
+//Comportamiento del botón
+window.onload = function() {
+    setTimeout(function() {
+        document.querySelector('button').classList.add('visible');
+    }, 14000); 
+};
+
+document.querySelector('button').addEventListener('click', function() {
+parent.postMessage('scrollToSection1', '*');
+});
