@@ -35,7 +35,7 @@ function typeEffect(word, callback) {
             i++;
             setTimeout(typeLetter, Math.random() * (60 - 30) + 30);
         } else {
-            let waitTime = (word === "Soluciones Contables.") ? 60000 : 1000;
+            let waitTime = (word === "Soluciones Contables. ") ? 60000 : 1000;
             setTimeout(() => {
                 if (index < words.length - 1) {
                     eraseEffect(callback);
