@@ -15,7 +15,6 @@ selector {
     clip-path: polygon(0% 0%, 100% 0%, 100% 33%, 0% 60%);
 }
 
-/* Responsividad adicional */
 @media (max-width: 500px) {	
     body {
         padding-top: 5px;

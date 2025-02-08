@@ -12,12 +12,12 @@ canvas {
 }
 
 .gradient-container {
-    position: absolute; /* O usa fixed si prefieres */
+    position: absolute; 
     top: 0;
     right: 0;
     width: 80%;
     height: 100vh;
-    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+    overflow: hidden; 
 }
 
 #gradient-canvas {
@@ -26,13 +26,7 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Debe estar detrás de la imagen */
-}
-
-@keyframes fadeScaleRotate {
-    0% { opacity: 0.7; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
-    50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.05) rotate(180deg); }
-    100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1) rotate(360deg); }
+    z-index: 1; 
 }
 
 .overlay-image {
@@ -47,95 +41,23 @@ canvas {
     animation: fadeScaleRotate 2s infinite ease-in-out, rotate 120s infinite linear;
 }
 
+@keyframes fadeScaleRotate {
+    0% { opacity: 0.7; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+    50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.05) rotate(180deg); }
+    100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1) rotate(360deg); }
+}
 
 @keyframes rotate {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-
-
-button {
-    position: absolute;
-    bottom: 40%;
-    right: 19%;
-    cursor: pointer;
-    font-weight: 400;
-    transition: opacity 1s ease-in-out, visibility 0s linear 1s;
-    padding: 20px 50px;
-    border-radius: 200px;
-    background: #388FC8;
-    border: 1px solid transparent;
-    display: flex;
-    align-items: center;
-    font-size: 30px;
-    color: white;
-    z-index: 2;
-    opacity: 0;
-    visibility: hidden;
-    outline: none;
-    box-shadow: none;
-    -webkit-tap-highlight-color: transparent;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra sutil */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Sombra en el borde */
-}
-
-button svg {
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3)); /* Sombra en el SVG */
-}
-
-button.visible {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 1s ease-in-out;
-}
-
-button:hover {
-    background: #ffffff;
-    color: #388FC8;
-}
-
-button > svg {
-    width: 50px;
-    margin-left: 10px;
-    transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
-}
-
-button:hover svg {
-    transform: translateX(5px);
-    fill: #388FC8; 
-}
-
-button:active {
-    transform: scale(0.95);
-}
-
-
-@media (max-width: 1600px) {			
-    button {
-        bottom: 15%;
-
-        font-size: 30px
-    }
-}	
-
 @media (max-width: 1287px) {			
-	
-    button {
-        bottom: 10%;
-        right: 2%;
-    }
-
     .overlay-image {
-
         width: 1550px;
         height: 1550px;
-
-    }
-    
-    
+    } 
 }	
-
 
 @media (max-width: 1000px) {			
     canvas {
@@ -143,32 +65,6 @@ button:active {
         top: 0 !important;
         left: 50% !important;
     }	
-
-    button {
-        bottom: 15%;
-        right: 5%;
-        padding: 10px 20px;
-        border-radius: 200px;
-        font-size: 25px
-    }
-}	
-
-@media (max-width: 800px) {			
-    button {
-        bottom: 8%;
-    }
-}	
-
-@media (max-width: 600px) {			
-    button {
-        bottom: 5%;
-    }
-}	
-
-@media (max-width: 500px) {			
-    button {
-        bottom: 3%;
-    }
 }	
 
 @media (max-width: 400px) {			
@@ -180,15 +76,4 @@ button:active {
         border-radius:60px;
         z-index: 0; 
     }	
-
-    button {
-        bottom: 2.5%;
-        right: 10%;
-        padding: 5px 10px;
-        border-radius: 200px;
-        font-size: 15px
-    }
-    
-
-
 }	

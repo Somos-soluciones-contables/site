@@ -21,24 +21,25 @@
     <link rel="stylesheet" href="css/our-team-section.css">
     <link rel="stylesheet" href="css/contact-section.css">
 
-    <link rel="stylesheet" href="css/iframe.css"> 
+    <link rel="stylesheet" href="css/iframes.css"> 
     <link rel="stylesheet" href="css/clients-slider.css"> 
     <link rel="stylesheet" href="css/contact-map.css"> 
     <link rel="stylesheet" href="css/side-floating-buttons.css">
 
     <!-- Scripts -->
+    <script src="js/hero-to-s1-button.js" defer></script> 
     <script src="js/back-to-top-button.js" defer></script>  
     <script src="js/licence-plate-click.js" defer></script>  
     <script src="js/services-section-icons.js" defer></script>
     <script src="js/menu-behavior.js" defer></script>  
     <script src="js/contact-section.js" defer></script> 
-    <script src="js/clients-slider-behavior.js" defer></script> 
+    <script src="js/clients-slider-behavior.js" defer></script>   
 </head>    
 <body>
     <!-- Barra de navegación -->
     <div class="navbar">
         <a href="https://mari0ar.github.io/testSite" class="logo">
-            <img src="public/components/logo1.webp" alt="Logo" class="logo">
+            <img src="public/components/logo.webp" alt="Logo" class="logo">
         </a>
         <div class="toggle" onclick="toggleMenu()">
             <span></span>
@@ -46,21 +47,24 @@
             <span></span>
         </div>
         <div class="menu" id="menu">
-            <a href="#section1">Nosotros</a>
-            <a href="#section2">Servicios</a>
+            <a href="#our-team">Nosotros</a>
+            <a href="#our-services">Servicios</a>
             <a href="#clients">Clientes</a>
             <a href="#contact">Contacto</a>
         </div>
         <div class="toggle-menu">
-            <a href="#section1">Nosotros</a>
-            <a href="#section2">Servicios</a>
+            <a href="#our-team">Nosotros</a>
+            <a href="#our-services">Servicios</a>
             <a href="#clients">Clientes</a>
             <a href="#contact">Contacto</a>
         </div>
     </div>
-    <iframe id="responsive-iframe2" src="./hero-section/hero-section.html" width="100%" height="100%"  frameborder="0" style="overflow: hidden;"></iframe>
+
+    <!-- Sección 1: Hero Section -->
+    <iframe id="hero-iframe" src="./hero-section/hero-section.html" frameborder="0" ></iframe>
+    
     <!-- Sección 1: Nosotros -->
-    <section id="section1" class="section1">
+    <section id="our-team" class="our-team">
         <div class="wrapper">
             <h1>Quienes somos</h1>
             <div class="our_team">
@@ -130,15 +134,14 @@
         </div>	
     </section>
 
-    <!-- Sección 2  Servicios-->
-    <section id="section2" class="section2">
-        <div class="encapsulated-services">
-            <section class="services">
-                <h1 style="margin-bottom: 50px; text-align: left; font-weight: 300;">Nuestros servicios</h1>
-                <!-- Primera Fila -->
+    <!-- Sección 2: Servicios-->
+    <section id="our-services" class="our-services">
+        <div class="services-wrapper">
+            <section class="services-content">
+                <h1>Nuestros servicios</h1>
                 <div class="row">
                     <div class="column image-column">
-                        <img src="public/services-section/services.webp" alt="Services team photo" class="responsive-image">
+                        <img src="public/services-section/services.webp" alt="Services team photo" class="sevices-img">
                     </div>
                     <div class="column text-column fade-in">
                         <h2>Auditoría Interna</h2>
@@ -150,7 +153,6 @@
                                 <i class="fa-solid fa-list-check"></i>
                             </div>
                             <h3>Áreas a mejorar</h3>
-
                         </div>
                         <p>
                             - Compras y cuentas por pagar <br>
@@ -160,7 +162,7 @@
                             - Viáticos. <br>
                         </p>
                         <div class="icon-text">
-                            <div class="icon-container">
+                            <div class="lightbulb-container">
                                 <i class="fa-regular fa-lightbulb"></i>
                                 <i class="fa-solid fa-lightbulb" style="display: none;"></i>
                             </div>  
@@ -176,7 +178,6 @@
                         </p>
                     </div>
                 </div>
-                <!-- Segunda Fila -->
                 <div class="row two-column">
                     <div class="column text-column fade-in">
                         <h2>Auditoría Externa</h2>
@@ -189,9 +190,10 @@
                 </div>
             </section>
         </div> 
-        <iframe id="responsive-iframe" src="features-section/features.html" width="100%" frameborder="0" style="overflow: hidden;"></iframe>
+        <iframe id="services-iframe" src="features-section/features.html" frameborder="0"></iframe>
     </section>
 
+    <!-- Sección 3  Clientes-->
     <section id="clients" class="clients">
         <h1>Confian en nosotros</h1>
         <div id="carrusel">
@@ -401,67 +403,39 @@
             </div> 
         </div>
     </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <a href="https://mari0ar.github.io/testSite" class="logo">
-                <img src="public/components/logo1.webp" alt="Logo" class="footer-logo">
+                <img src="public/components/logo.webp" alt="Logo" class="footer-logo">
             </a>
             <div class="footer-buttons">
-                <a href="#section1">Nosotros</a>
-                <a href="#section2">Servicios</a>
+                <a href="#our-team">Nosotros</a>
+                <a href="#our-services">Servicios</a>
                 <a href="#clients">Clientes</a>
                 <a href="#contact">Contacto</a>
             </div>
             <div class="footer-credits">
                 <p>©2024 SOMOS Soluciones Contables - Todos los derechos reservados.</p>
                 <a href="https://cpcecba.org.ar/" target="_blank" rel="noopener noreferrer">
-                    <img src="public/components/cpce.webp" style="height: 25px; width: 100px;" alt="Test">
+                    <img src="public/components/cpce.webp" alt="Consejo profesional de ciencias económicas">
                 </a>
-                
-                <p style="font-size: 10px;"> Desarrollado por <i class="fas fa-robot" style="color: #A4D65E;"></i></p>             
+                <p> Desarrollado por <i class="fas fa-robot" style="color: #A4D65E;"></i></p>             
             </div>
         </div>
     </footer>
-     <!-- Botón flotante whatsapp -->
+
+    <!-- Floating buttons -->
     <div class="whatsapp-float">
         <a href="https://wa.me/+5493513990206" target="_blank" class="whatsapp-link" aria-label="Chat on WhatsApp">
           <img src="./public/components/whatsapp.webp" alt="WhatsApp" class="whatsapp-icon">
         </a>
     </div>
-     <!-- Botón flotante back to top -->
     <div class="back-to-top-container" id="backToTop">
         <a href="#top" class="back-to-top-button" aria-label="Back to top">
             <i class="fa-solid fa-chevron-up"></i>
         </a>
     </div>
 </body>
-<script>
-    window.addEventListener('message', function(event) {
-      // Verificar que el mensaje sea válido (opcional, si solo esperas este mensaje)
-      if (event.data === 'scrollToSection1') {
-        document.querySelector('#section1').scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  </script>
-<script>
-    document.querySelector("form").addEventListener("submit", function(event) {
-    let valid = true;
-    const inputs = document.querySelectorAll("input, textarea");
-    
-    inputs.forEach(input => {
-        if (!input.value) {
-            valid = false;
-            input.style.borderColor = "#fe0419"; // Puedes agregar una clase o cambiar el estilo
-        } else {
-            input.style.borderColor = ""; // Restablecer el estilo si es válido
-        }
-    });
-
-    if (!valid) {
-        event.preventDefault();
-    }
-});
-
-</script>  
 </html>

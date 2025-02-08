@@ -1,5 +1,5 @@
 // Script para alternar el ícono de foco
-const container = document.querySelector('.icon-container');
+const container = document.querySelector('.lightbulb-container');
 const icons = container.querySelectorAll('i');
 
 container.addEventListener('mouseenter', () => {

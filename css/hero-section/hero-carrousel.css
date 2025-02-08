@@ -1,4 +1,3 @@
-/* Estilos para el contenedor del carrusel */
 .swiper-container {
     width: 40%;
     height: 550px;
@@ -11,7 +10,6 @@
     opacity: 0.99;
 }
 
-/* Estilos para las imágenes del carrusel */
 .swiper-slide img {
     width: 100%;
     height: 100%;
@@ -19,7 +17,6 @@
     border-radius: 7%; 
 }
 
-/* Estilos para la paginación */
 .swiper-pagination {
     position: absolute;
     bottom: 10px;
@@ -28,36 +25,31 @@
     border-radius: 7%;
 }
 
-/* Estilos para los bullets inactivos */
 .swiper-pagination-bullet {
-    background-color: white !important; /* Color blanco sólido */
-    opacity: 1 !important; /* Sin transparencia */
-    width: 10px; /* Tamaño del bullet */
-    height: 10px; /* Tamaño del bullet */
-    margin: 0 5px; /* Espacio entre bullets */
+    background-color: white !important; 
+    opacity: 1 !important; 
+    width: 10px; 
+    height: 10px; 
+    margin: 0 5px; 
 }
 
-/* Estilos para el bullet activo */
 .swiper-pagination-bullet-active {
-    background-color: #4a95ff !important; /* Color azul para el bullet activo */
-    opacity: 1 !important; /* Sin transparencia */
+    background-color: #4a95ff !important; 
+    opacity: 1 !important; 
 }
-/* Ajustes responsivos */
 
-/* Ajustes responsivos */
 @media (max-width: 1550px) {
     .swiper-container {
         width: 45%;
-        height: 500px; /* Ajusta la altura según tus necesidades */
+        height: 500px; 
 
     }
 }
 
-/* Ajustes responsivos */
 @media (max-width: 1270px) {
     .swiper-container {
         width: 60%;
-        height: 450px; /* Ajusta la altura según tus necesidades */
+        height: 450px; 
 
     }
 }
@@ -82,10 +74,8 @@
     
 }
 
-
 @media (max-width: 525px) {
     .swiper-container {
-        /* height: 300px; */
         width: 85%;
     }
 }

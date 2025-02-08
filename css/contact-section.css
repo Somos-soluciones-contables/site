@@ -5,7 +5,6 @@
     font-weight: 300;
 }
 
-/* Estilos del formulario de contacto */
 .contact-container {
     display: flex;
     justify-content: space-between;
@@ -187,8 +186,6 @@ button:active {
     transform: scale(0.95); 
 }
 
-
-
 .contact-label {
     font-size: 18px;
     font-weight: 500;
@@ -196,7 +193,7 @@ button:active {
 }
 
 .contact-label i {
-    margin-right: 10px; /* Ajusta el valor según lo que necesites */
+    margin-right: 10px; 
   }
   
 
@@ -213,7 +210,7 @@ button:active {
 
 .input-container {
     position: relative;
-    flex: 1; /* Permitir que los campos crezcan */
+    flex: 1; 
     margin-right: 10px;
 }
 
@@ -231,7 +228,6 @@ textarea:focus + .placeholder,
 textarea:not(:placeholder-shown) + .placeholder {
     opacity: 0;
 }
-
 
 @media (max-width: 1050px) {
     .contact-form-container {
@@ -295,7 +291,6 @@ textarea:not(:placeholder-shown) + .placeholder {
     .contact-data { 
         font-size: 30px;     
         margin-left: 3%;   
-        /* padding-bottom: 50px; */
     }      
 
     button {

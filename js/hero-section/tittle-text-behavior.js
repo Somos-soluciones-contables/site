@@ -7,7 +7,7 @@ function typeEffect(word, callback) {
     let i = 0;
     textElement.innerHTML = "";
     textElement.style.opacity = 1;
-
+    
     function typeLetter() { 
         if (i === 0) { 
             if (word.trim() === "Soluciones Contables.") {
@@ -41,7 +41,6 @@ function typeEffect(word, callback) {
             }, waitTime);
         }
     }
-
     typeLetter();
 }
 
@@ -70,7 +69,6 @@ function cycleText() {
 }
 cycleText();
 
-//Comportamiento del botón
 window.onload = function() {
     setTimeout(function() {
         document.querySelector('button').classList.add('visible');

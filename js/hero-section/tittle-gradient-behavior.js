@@ -1,7 +1,3 @@
-window.addEventListener('DOMContentLoaded', (e) => {
-    var gradient = new Gradient;
-    gradient.initGradient("#gradient-canvas");
-});
 
 function normalizeColor(hexCode) {
     return [
@@ -723,3 +719,7 @@ class Gradient {
 	}
 }
 
+window.addEventListener('DOMContentLoaded', (e) => {
+    var gradient = new Gradient;
+    gradient.initGradient("#gradient-canvas");
+});

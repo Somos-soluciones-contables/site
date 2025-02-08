@@ -13,5 +13,23 @@ function createContactForm() {
         input.dispatchEvent(new Event('blur'));
     });
 }
-// aplico el efecto al cargar la página
 window.onload = createContactForm;
+
+//Validación del campos del form
+document.querySelector("form").addEventListener("submit", function(event) {
+    let valid = true;
+    const inputs = document.querySelectorAll("input, textarea");
+    
+    inputs.forEach(input => {
+        if (!input.value) {
+            valid = false;
+            input.style.borderColor = "#fe0419"; 
+        } else {
+            input.style.borderColor = ""; 
+        }
+    });
+
+    if (!valid) {
+        event.preventDefault();
+    }
+});
