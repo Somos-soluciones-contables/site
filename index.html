@@ -10,27 +10,29 @@
     <link rel="icon" href="./public/favicon.webp" type="image/x-icon">    
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" >
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/sections.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/services-section.css">
-    <link rel="stylesheet" href="css/our-team-section.css">
-    <link rel="stylesheet" href="css/contact-section.css">
-
     <link rel="stylesheet" href="css/iframes.css"> 
+    <link rel="stylesheet" href="css/services-section.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/our-team-section.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/contact-section.css"media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/footer.css" media="print" onload="this.media='all'">
+
     <link rel="stylesheet" href="css/clients-slider.css"> 
     <link rel="stylesheet" href="css/contact-map.css"> 
     <link rel="stylesheet" href="css/side-floating-buttons.css">
 
     <!-- Scripts -->
-    <script src="js/hero-to-s1-button.js" defer></script> 
-    <script src="js/back-to-top-button.js" defer></script>  
-    <script src="js/licence-plate-click.js" defer></script>  
-    <script src="js/services-section-icons.js" defer></script>
+    <script src="js/hero-to-s1-button.js" async></script> 
+    <script src="js/back-to-top-button.js" async></script>  
+    <script src="js/licence-plate-click.js" async></script>  
+    <script src="js/services-section-icons.js" async></script>
     <script src="js/menu-behavior.js" defer></script>  
     <script src="js/contact-section.js" defer></script> 
     <script src="js/clients-slider-behavior.js" defer></script>   
@@ -61,7 +63,7 @@
     </div>
 
     <!-- Sección 1: Hero Section -->
-    <iframe id="hero-iframe" src="./hero-section/hero-section.html" frameborder="0" ></iframe>
+    <iframe id="hero-iframe" src="./hero-section/hero-section.html" frameborder="0" title="Sección principal" loading="lazy"></iframe>
     
     <!-- Sección 1: Nosotros -->
     <section id="our-team" class="our-team">
@@ -190,14 +192,14 @@
                 </div>
             </section>
         </div> 
-        <iframe id="services-iframe" src="features-section/features.html" frameborder="0"></iframe>
+        <iframe id="services-iframe" src="features-section/features.html" frameborder="0" title="Nuestros servicios" loading="lazy"></iframe>
     </section>
 
     <!-- Sección 3  Clientes-->
     <section id="clients" class="clients">
         <h1>Confian en nosotros</h1>
         <div id="carrusel">
-            <button id="prev-slide-btn">
+            <button id="prev-slide-btn" aria-label="Anterior">
                 <i class="fas fa-chevron-left"></i>
             </button>  
             <div id="clients-slider">
@@ -213,8 +215,8 @@
                         </a>
                     </div>
                     <div class="client-slide img-3">
-                        <a href="https://www.venex.com.ar" target="_blank" rel="noopener noreferrer" loading="lazy">
-                            <img src="public/components/clients-logos/venex.webp" alt="Venex">
+                        <a href="https://www.venex.com.ar" target="_blank" rel="noopener noreferrer">
+                            <img src="public/components/clients-logos/venex.webp" alt="Venex" loading="lazy">
                         </a>
                     </div>
                     <div class="client-slide img-4">
@@ -329,7 +331,7 @@
                     </div>                                                                                                                                                                                                                                                                                                                      
                 </div>
             </div>
-            <button id="next-slide-btn">
+            <button id="next-slide-btn" aria-label="Siguiente">
                 <i class="fas fa-chevron-right"></i>
             </button>
         </div>
@@ -358,18 +360,19 @@
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.911882862973!2d-64.17259832361881!3d-31.416553774261743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2a242823489%3A0x90e3d3813f211ffc!2sFray%20Mamerto%20Esqui%C3%BA%2062%2C%20X5000%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1738461783745!5m2!1ses!2sar"
                         allowfullscreen="" 
-                        loading="lazy">
+                        loading="lazy"
+                        title="Ubicación en Google Maps">
                     </iframe>
                 </div>              
                 <div class="social-icons-wrapper">
                     <a href="https://wa.me/+5493513990206" class="social-icon whatsapp" target="_blank">
-                      <i class="fab fa-whatsapp"></i>
+                      <i class="fab fa-whatsapp" alt="WhatsApp"></i>
                     </a>
                     <a href="https://www.facebook.com/somossolucionescontablesok" class="social-icon facebook" target="_blank">
-                      <i class="fab fa-facebook-f"></i>
+                      <i class="fab fa-facebook-f" alt="Facebook"></i>
                     </a>
                     <a href="https://www.instagram.com/somossoluciones.ok/" class="social-icon instagram" target="_blank">
-                      <i class="fab fa-instagram"></i>
+                      <i class="fab fa-instagram" alt="Instagram"></i>
                     </a>
                 </div>  
             </div> 
@@ -419,7 +422,7 @@
             <div class="footer-credits">
                 <p>©2024 SOMOS Soluciones Contables - Todos los derechos reservados.</p>
                 <a href="https://cpcecba.org.ar/" target="_blank" rel="noopener noreferrer">
-                    <img src="public/components/cpce.webp" alt="Consejo profesional de ciencias económicas">
+                    <img src="public/components/cpce.webp" alt="Consejo profesional de ciencias económicas" loading="lazy">
                 </a>
                 <p> Desarrollado por <i class="fas fa-robot" style="color: #A4D65E;"></i></p>             
             </div>
