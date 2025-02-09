@@ -41,7 +41,7 @@
     <!-- Barra de navegación -->
     <div class="navbar">
         <a href="https://mari0ar.github.io/testSite" class="logo">
-            <img src="public/components/logo.webp" alt="Logo" class="logo">
+            <img src="public/components/logo.webp" alt="Logo" class="logo" loading="lazy">
         </a>
         <div class="toggle" onclick="toggleMenu()">
             <span></span>
@@ -379,10 +379,16 @@
             <div id="contact-form-placeholder">
                 <div class="contact-form-container">
                     <h3>Envíanos un mensaje</h3>
-                    <form>
+                    <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleSubmit(event)">
+                        <input type="hidden" name="form-name" value="contacto"> <!-- Necesario para Netlify -->
+                    
+                        <p style="display: none;">
+                            <label> No llenar: <input name="bot-field" /> </label>
+                        </p>
+                    
                         <div class="input-row">
                             <div class="input-container">
-                                <input type="text" id="nombre" name="nombre" placeholder=" ">
+                                <input type="text" id="nombre" name="nombre" placeholder=" " required>
                                 <label class="placeholder">Nombre</label>
                             </div>
                             <div class="input-container">
@@ -390,18 +396,24 @@
                                 <label class="placeholder">Teléfono</label>
                             </div>
                             <div class="input-container">
-                                <input type="email" id="email" name="email" placeholder=" ">
+                                <input type="email" id="email" name="email" placeholder=" " required oninput="validateEmail()">
                                 <label class="placeholder">Correo electrónico</label>
                             </div>
                         </div>
                         <div class="mensaje-container">
                             <div class="input-container">
-                                <textarea id="mensaje" name="mensaje" placeholder=" "></textarea>
+                                <textarea id="mensaje" name="mensaje" placeholder=" " required></textarea>
                                 <label class="placeholder">¿En qué podemos ayudarte?</label>
                             </div>
                         </div>
-                        <button type="submit">Enviar</button>
+                        <button type="submit" id="submit-btn" disabled>Enviar</button>
                     </form>
+                    
+                    <!-- Mensaje de éxito -->
+                    <p id="success-message" style="display: none; color: green; margin-top: 10px;">
+                        Tu mensaje fue enviado correctamente. Nos pondremos en contacto a la brevedad.
+                    </p>
+                    
                 </div>
             </div> 
         </div>
@@ -440,5 +452,46 @@
             <i class="fa-solid fa-chevron-up"></i>
         </a>
     </div>
+    <script>
+        function validateEmail() {
+            const emailInput = document.getElementById('email');
+            const submitBtn = document.getElementById('submit-btn');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+            if (emailPattern.test(emailInput.value)) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+    
+        function handleSubmit(event) {
+            event.preventDefault(); // Evita que el formulario se recargue
+    
+            const form = event.target;
+            const formData = new FormData(form);
+    
+            fetch("/", {
+                method: "POST",
+                body: formData
+            })
+            .then(() => {
+                // Mostrar mensaje de éxito
+                const successMessage = document.getElementById("success-message");
+                successMessage.style.display = "block";
+    
+                // Ocultar el mensaje después de 30 segundos
+                setTimeout(() => {
+                    successMessage.style.display = "none";
+                }, 30000);
+    
+                // Reiniciar el formulario
+                form.reset();
+                document.getElementById('submit-btn').disabled = true;
+            })
+            .catch(error => console.error("Error al enviar el formulario:", error));
+        }
+    </script>
+    
 </body>
 </html>
