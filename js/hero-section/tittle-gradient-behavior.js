@@ -1,11 +1,7 @@
-
 function normalizeColor(hexCode) {
-    return [
-        ((hexCode >> 16) & 255) / 255,
-        ((hexCode >> 8) & 255) / 255,
-        (255 & hexCode) / 255
-    ];
+    return [(hexCode >> 16 & 255) / 255, (hexCode >> 8 & 255) / 255, (hexCode & 255) / 255];
 }
+
 ["SCREEN", "LINEAR_LIGHT"].reduce(
 	(hexCode, t, n) => Object.assign(hexCode, { [t]: n }),
 	{}
@@ -696,21 +692,11 @@ class Gradient {
 		}
 	}
 	initGradientColors() {
-		this.sectionColors = [
-			"--gradient-color-1",
-			"--gradient-color-2",
-			"--gradient-color-3",
-			"--gradient-color-4"
-		]
-			.map((cssPropertyName) => {
+		this.sectionColors = ["--gradient-color-1", "--gradient-color-2", "--gradient-color-3", "--gradient-color-4"]
+			.map(cssPropertyName => {
 				let hex = this.computedCanvasStyle.getPropertyValue(cssPropertyName).trim();
-				if (4 === hex.length) {
-					const hexTemp = hex
-						.substr(1)
-						.split("")
-						.map((hexTemp) => hexTemp + hexTemp)
-						.join("");
-					hex = `#${hexTemp}`;
+				if (hex.length === 4) {
+					hex = `#${hex.substr(1).split('').map(c => c + c).join('')}`;
 				}
 				return hex && `0x${hex.substr(1)}`;
 			})
@@ -719,7 +705,7 @@ class Gradient {
 	}
 }
 
-window.addEventListener('DOMContentLoaded', (e) => {
-    var gradient = new Gradient;
+window.addEventListener('DOMContentLoaded', () => {
+    const gradient = new Gradient();
     gradient.initGradient("#gradient-canvas");
 });
