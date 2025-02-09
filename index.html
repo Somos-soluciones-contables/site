@@ -379,10 +379,10 @@
             <div id="contact-form-placeholder">
                 <div class="contact-form-container">
                     <h3>Envíanos un mensaje</h3>
-                    <form name="contact" netlify>
+                    <form name="contact" method="POST" data-netlify="true"> 
                         <div class="input-row">
                             <div class="input-container">
-                                <input type="text" id="nombre" name="nombre" placeholder=" ">
+                                <input type="text" id="nombre" name="nombre" placeholder=" " required>
                                 <label class="placeholder">Nombre</label>
                             </div>
                             <div class="input-container">
@@ -390,18 +390,19 @@
                                 <label class="placeholder">Teléfono</label>
                             </div>
                             <div class="input-container">
-                                <input type="email" id="email" name="email" placeholder=" ">
+                                <input type="email" id="email" name="email" placeholder=" " required>
                                 <label class="placeholder">Correo electrónico</label>
                             </div>
                         </div>
                         <div class="mensaje-container">
                             <div class="input-container">
-                                <textarea id="mensaje" name="mensaje" placeholder=" "></textarea>
+                                <textarea id="mensaje" name="mensaje" placeholder=" " required></textarea>
                                 <label class="placeholder">¿En qué podemos ayudarte?</label>
                             </div>
                         </div>
                         <button type="submit">Enviar</button>
                     </form>
+                    
                 </div>
             </div> 
         </div>
