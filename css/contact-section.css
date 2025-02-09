@@ -8,6 +8,7 @@
 .contact-container {
     display: flex;
     justify-content: space-between;
+    font-family: inherit;
 }
 
 form {
