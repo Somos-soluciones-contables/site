@@ -379,7 +379,7 @@
             <div id="contact-form-placeholder">
                 <div class="contact-form-container">
                     <h3>Envíanos un mensaje</h3>
-                    <form name="contact" method="POST" data-netlify="true"> 
+                    <form id="contact-form">
                         <div class="input-row">
                             <div class="input-container">
                                 <input type="text" id="nombre" name="nombre" placeholder=" " required>
@@ -402,6 +402,8 @@
                         </div>
                         <button type="submit">Enviar</button>
                     </form>
+                    <p id="mensaje-exito" style="display: none; color: green;">¡Mensaje enviado con éxito!</p>
+                    
                     
                 </div>
             </div> 
@@ -441,5 +443,34 @@
             <i class="fa-solid fa-chevron-up"></i>
         </a>
     </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("Hp4-W4eIBHX27v7dE"); // Reemplaza con tu User ID de EmailJS
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que la página se recargue
+
+            // Capturar datos del formulario
+            let params = {
+                nombre: document.getElementById("nombre").value,
+                telefono: document.getElementById("telefono").value,
+                email: document.getElementById("email").value,
+                mensaje: document.getElementById("mensaje").value
+            };
+
+            // Enviar correo con EmailJS
+            emailjs.send("service_8hjx2c3", "template_0gwsmdq", params)
+            .then(function(response) {
+                console.log("Correo enviado:", response);
+                document.getElementById("mensaje-exito").style.display = "block"; // Mostrar mensaje de éxito
+            }, function(error) {
+                console.error("Error al enviar:", error);
+            });
+        });
+    </script>
+
 </body>
 </html>
