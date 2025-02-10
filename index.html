@@ -382,9 +382,7 @@
                     <form id="contact-form">
                         <div class="input-row">
                             <div class="input-container">
-                                <input type="text" id="nombre" name="nombre" placeholder=" " required 
-                                    oninvalid="this.setCustomValidity('Por favor completa este campo')" 
-                                    oninput="this.setCustomValidity('')">
+                                <input type="text" id="nombre" name="nombre" placeholder=" " required>
                                 <label class="placeholder">Nombre</label>
                             </div>
                             <div class="input-container">
@@ -392,27 +390,20 @@
                                 <label class="placeholder">Teléfono</label>
                             </div>
                             <div class="input-container">
-                                <input type="email" id="email" name="email" placeholder=" " required 
-                                    oninvalid="this.setCustomValidity('Por favor introduce un correo válido')" 
-                                    oninput="this.setCustomValidity('')">
+                                <input type="email" id="email" name="email" placeholder=" " required>
                                 <label class="placeholder">Correo electrónico</label>
                             </div>
                         </div>
                         <div class="mensaje-container">
                             <div class="input-container">
-                                <textarea id="mensaje" name="mensaje" placeholder=" " required 
-                                    oninvalid="this.setCustomValidity('Por favor escribe tu mensaje')" 
-                                    oninput="this.setCustomValidity('')"></textarea>
+                                <textarea id="mensaje" name="mensaje" placeholder=" " required></textarea>
                                 <label class="placeholder">¿En qué podemos ayudarte?</label>
                             </div>
                         </div>
-                        <button type="submit" class="btn-submit">
-                            <span class="btn-text">Enviar</span>
-                            <div class="loader"></div>
-                        </button>
+                        <button type="submit">Enviar</button>
                     </form>
-                    <p id="mensaje-exito">
-                        ☑️ Su consulta fue enviada correctamente, nos contactaremos a la brevedad.
+                    <p id="mensaje-exito" style="display: none; color: #3a3a3a;">
+                        ✅ Su consulta fue enviada correctamente, nos contactaremos a la brevedad.
                     </p>
                 </div>
             </div> 
@@ -458,33 +449,21 @@
         (function() {
             emailjs.init("Hp4-W4eIBHX27v7dE"); 
         })();
-    
+
         document.getElementById("contact-form").addEventListener("submit", function(event) {
             event.preventDefault(); 
-    
+
             let params = {
                 nombre: document.getElementById("nombre").value,
                 telefono: document.getElementById("telefono").value,
                 email: document.getElementById("email").value,
                 mensaje: document.getElementById("mensaje").value
             };
-    
+
             emailjs.send("service_8hjx2c3", "template_0gwsmdq", params)
             .then(function(response) {
                 console.log("Correo enviado:", response);
-                
-                // Mostrar mensaje de éxito
-                let mensajeExito = document.getElementById("mensaje-exito");
-                mensajeExito.style.display = "block";
-    
-                // Limpiar los campos del formulario
-                document.getElementById("contact-form").reset();
-    
-                // Ocultar el mensaje después de 10 segundos
-                setTimeout(function() {
-                    mensajeExito.style.display = "none";
-                }, 10000);
-    
+                document.getElementById("mensaje-exito").style.display = "block";
             }, function(error) {
                 console.error("Error al enviar:", error);
             });
