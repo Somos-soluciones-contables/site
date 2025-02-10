@@ -402,9 +402,9 @@
                         </div>
                         <button type="submit">Enviar</button>
                     </form>
-                    <p id="mensaje-exito" style="display: none; color: rgb(35, 179, 35);">Tu mensaje fué enviado! Nos contactaremos en la brevedad ☑️</p>
-                    
-                    
+                    <p id="mensaje-exito" style="display: none; color: #3a3a3a;">
+                        ✅ Su consulta fue enviada correctamente, nos contactaremos a la brevedad.
+                    </p>
                 </div>
             </div> 
         </div>
@@ -447,25 +447,35 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         (function() {
-            emailjs.init("Hp4-W4eIBHX27v7dE"); // Reemplaza con tu User ID de EmailJS
+            emailjs.init("Hp4-W4eIBHX27v7dE"); 
         })();
-
+    
         document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Evita que la página se recargue
-
-            // Capturar datos del formulario
+            event.preventDefault(); 
+    
             let params = {
                 nombre: document.getElementById("nombre").value,
                 telefono: document.getElementById("telefono").value,
                 email: document.getElementById("email").value,
                 mensaje: document.getElementById("mensaje").value
             };
-
-            // Enviar correo con EmailJS
+    
             emailjs.send("service_8hjx2c3", "template_0gwsmdq", params)
             .then(function(response) {
                 console.log("Correo enviado:", response);
-                document.getElementById("mensaje-exito").style.display = "block"; // Mostrar mensaje de éxito
+                
+                // Mostrar mensaje de éxito
+                let mensajeExito = document.getElementById("mensaje-exito");
+                mensajeExito.style.display = "block";
+    
+                // Limpiar los campos del formulario
+                document.getElementById("contact-form").reset();
+    
+                // Ocultar el mensaje después de 10 segundos
+                setTimeout(function() {
+                    mensajeExito.style.display = "none";
+                }, 10000);
+    
             }, function(error) {
                 console.error("Error al enviar:", error);
             });
