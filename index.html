@@ -382,7 +382,9 @@
                     <form id="contact-form">
                         <div class="input-row">
                             <div class="input-container">
-                                <input type="text" id="nombre" name="nombre" placeholder=" " required>
+                                <input type="text" id="nombre" name="nombre" placeholder=" " required 
+                                    oninvalid="this.setCustomValidity('Por favor completa este campo')" 
+                                    oninput="this.setCustomValidity('')">
                                 <label class="placeholder">Nombre</label>
                             </div>
                             <div class="input-container">
@@ -390,20 +392,27 @@
                                 <label class="placeholder">Teléfono</label>
                             </div>
                             <div class="input-container">
-                                <input type="email" id="email" name="email" placeholder=" " required>
+                                <input type="email" id="email" name="email" placeholder=" " required 
+                                    oninvalid="this.setCustomValidity('Por favor introduce un correo válido')" 
+                                    oninput="this.setCustomValidity('')">
                                 <label class="placeholder">Correo electrónico</label>
                             </div>
                         </div>
                         <div class="mensaje-container">
                             <div class="input-container">
-                                <textarea id="mensaje" name="mensaje" placeholder=" " required></textarea>
+                                <textarea id="mensaje" name="mensaje" placeholder=" " required 
+                                    oninvalid="this.setCustomValidity('Por favor escribe tu mensaje')" 
+                                    oninput="this.setCustomValidity('')"></textarea>
                                 <label class="placeholder">¿En qué podemos ayudarte?</label>
                             </div>
                         </div>
-                        <button type="submit">Enviar</button>
+                        <button type="submit" class="btn-submit">
+                            <span class="btn-text">Enviar</span>
+                            <div class="loader"></div>
+                        </button>
                     </form>
-                    <p id="mensaje-exito" style="display: none; color: #3a3a3a;">
-                        ✅ Su consulta fue enviada correctamente, nos contactaremos a la brevedad.
+                    <p id="mensaje-exito">
+                        ☑️ Su consulta fue enviada correctamente, nos contactaremos a la brevedad.
                     </p>
                 </div>
             </div> 
