@@ -167,32 +167,64 @@ input:focus, textarea:focus {
     font-weight: 650;
 }
 
-button {
-    font-family: inherit;
+.button-container {
+    display: flex;
+    justify-content: flex-end;
     margin-top: 10px;
-    padding: 10px;
+}
+
+#submit-button {
     background-color: #2E5790;
     color: white;
-    border: 2px solid #a0c4ff;
-    border-color: #2E5790;
-    border-radius: 8px;
+    border: none;
+    padding: 16px 25px;
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
-    width: 100px;
-    transition: background-color 0.3s, transform 0.2s;
-    align-self: flex-end; 
+    position: relative;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    overflow: hidden;
+    transition: background 0.3s, transform 0.2s;
 }
 
-button:hover {
-    background-color: #ffffff; 
+#submit-button.sending {
+    background-color: #25D366;
     transform: scale(1.05);
-    color: #2E5790;
 }
 
-button:active {
-    transform: scale(0.95); 
+#submit-button.sent {
+    background-color: #25D366;
 }
+
+.loader {
+    font-size: 18px;
+    color: white;
+}
+
+#success-message {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
+
 
 .contact-label {
     font-size: 18px;
@@ -228,6 +260,7 @@ button:active {
 
 textarea {
     height: 250px;
+    font-family: inherit;
 }
 
 input:focus + .placeholder,
@@ -303,9 +336,9 @@ textarea:not(:placeholder-shown) + .placeholder {
         margin-left: 3%;   
     }      
 
-    button {
+    /* button {
         width: 40%; 
-    }
+    } */
 }
 
 @media (max-width: 700px) {   

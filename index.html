@@ -36,11 +36,13 @@
     <script src="js/menu-behavior.js" defer></script>  
     <script src="js/contact-section.js" defer></script> 
     <script src="js/clients-slider-behavior.js" defer></script>   
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/contact-form.js"></script>  
 </head>    
 <body>
     <!-- Barra de navegación -->
     <div class="navbar">
-        <a href="https://mari0ar.github.io/testSite" class="logo">
+        <a href="https://somos-sc.com.ar" class="logo">
             <img src="public/components/logo.webp" alt="Logo" class="logo" loading="lazy">
         </a>
         <div class="toggle" onclick="toggleMenu()">
@@ -121,7 +123,7 @@
                     <div class="member_img">
                         <img src="public/our-team-section/member4.webp" alt="Leandro Sánchez">
                         <div class="social_media">
-                            <a href="https://ar.linkedin.com/in/cristina-vetter-260807247" target="_blank">
+                            <a href="http://www.linkedin.com/in/leandro-sanchez-b68b9a23b" target="_blank">
                                 <div class="linkedin_item"><i class="fab fa-linkedin-in"></i></div>
                             </a>
                         </div>
@@ -382,29 +384,37 @@
                     <form id="contact-form">
                         <div class="input-row">
                             <div class="input-container">
-                                <input type="text" id="nombre" name="nombre" placeholder=" " required>
+                                <input type="text" id="nombre" name="nombre" required="" placeholder="" oninvalid="this.setCustomValidity('Por favor ingresa tu nombre.')" oninput="setCustomValidity('')"> 
                                 <label class="placeholder">Nombre</label>
                             </div>
-                            <div class="input-container">
-                                <input type="tel" id="telefono" name="telefono" placeholder=" ">
+                            <div class="input-container"> 
+                                <input type="tel" id="telefono" name="telefono" required placeholder=""  
+                                oninvalid="validatePhoneInput(this)" 
+                                oninput="clearCustomValidity(this)">
                                 <label class="placeholder">Teléfono</label>
                             </div>
+                            
                             <div class="input-container">
-                                <input type="email" id="email" name="email" placeholder=" " required>
+                                <input type="email" id="email" name="email" required placeholder="" 
+                                       oninvalid="validateEmail(this)" 
+                                       oninput="clearCustomValidity(this)">
                                 <label class="placeholder">Correo electrónico</label>
                             </div>
                         </div>
                         <div class="mensaje-container">
                             <div class="input-container">
-                                <textarea id="mensaje" name="mensaje" placeholder=" " required></textarea>
+                                <textarea id="mensaje" name="mensaje"required="" placeholder="" oninvalid="this.setCustomValidity('Por favor ingresa tu mensaje.')" oninput="setCustomValidity('')"></textarea>
                                 <label class="placeholder">¿En qué podemos ayudarte?</label>
                             </div>
                         </div>
-                        <button type="submit">Enviar</button>
-                    </form>
-                    <p id="mensaje-exito" style="display: none; color: #3a3a3a;">
-                        ✅ Su consulta fue enviada correctamente, nos contactaremos a la brevedad.
-                    </p>
+                        <div class="button-container">
+                            <button id="submit-button" type="submit">
+                                <span class="button-text"><i class="fa-regular fa-paper-plane"></i> Enviar</span>
+                                <span class="loader hidden"><i class="fas fa-spinner fa-spin"></i></span>
+                            </button>
+                        </div>
+                        <span id="success-message" class="hidden"><i class="fas fa-check-circle"></i> Tu mensaje fue enviado</span>
+                    </form>   
                 </div>
             </div> 
         </div>
@@ -413,7 +423,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <a href="https://mari0ar.github.io/testSite" class="logo">
+            <a href="https://somos-sc.com.ar" class="logo">
                 <img src="public/components/logo.webp" alt="Logo" class="footer-logo">
             </a>
             <div class="footer-buttons">
@@ -443,15 +453,22 @@
             <i class="fa-solid fa-chevron-up"></i>
         </a>
     </div>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
+    <script>       
         (function() {
             emailjs.init("Hp4-W4eIBHX27v7dE"); 
         })();
 
         document.getElementById("contact-form").addEventListener("submit", function(event) {
             event.preventDefault(); 
+            
+            let button = document.getElementById("submit-button");
+            let buttonText = button.querySelector(".button-text");
+            let loader = button.querySelector(".loader");
+            let successMessage = document.getElementById("success-message");
+            
+            button.classList.add("sending");
+            buttonText.classList.add("hidden");
+            loader.classList.remove("hidden");
 
             let params = {
                 nombre: document.getElementById("nombre").value,
@@ -463,12 +480,27 @@
             emailjs.send("service_8hjx2c3", "template_0gwsmdq", params)
             .then(function(response) {
                 console.log("Correo enviado:", response);
-                document.getElementById("mensaje-exito").style.display = "block";
+                button.classList.remove("sending");
+                button.classList.add("sent");
+                buttonText.innerHTML = "<i class='fas fa-check'></i>";
+                buttonText.classList.remove("hidden");
+                loader.classList.add("hidden");
+                
+                successMessage.classList.remove("hidden");
+                successMessage.style.opacity = "1";
+                setTimeout(() => {
+                    successMessage.style.opacity = "0";
+                    setTimeout(() => {
+                        successMessage.classList.add("hidden");
+                    }, 500);
+                    button.classList.remove("sent");
+                    buttonText.innerHTML = "<i class='fas fa-paper-plane'></i> Enviar";
+                    document.getElementById("contact-form").reset();
+                }, 10000);
             }, function(error) {
                 console.error("Error al enviar:", error);
             });
         });
     </script>
-
 </body>
 </html>

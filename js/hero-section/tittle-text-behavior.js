@@ -72,7 +72,7 @@ cycleText();
 window.onload = function() {
     setTimeout(function() {
         document.querySelector('button').classList.add('visible');
-    }, 14000); 
+    }, 12000); 
 };
 
 document.querySelector('button').addEventListener('click', function() {
