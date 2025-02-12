@@ -23,12 +23,12 @@ canvas {
 
 
 .gradient-container {
-    position: absolute; /* O usa fixed si prefieres */
+    position: absolute; 
     top: 0;
     right: 0;
     width: 80%;
     height: 100vh;
-    overflow: hidden; /* Asegura que la imagen no se salga del contenedor */
+    overflow: hidden; 
 }
 
 #gradient-canvas {
@@ -37,7 +37,7 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Debe estar detrás de la imagen */
+    z-index: 1;
 }
 
 .overlay-image {  
@@ -47,7 +47,7 @@ canvas {
     width: 850px;
     height: 850px;
     transform: translate(-50%, -50%); /* Centra la imagen */
-    z-index: 1; /* Asegura que esté por encima del gradiente */
+    z-index: 1; 
 
     opacity: 0;
 }
@@ -60,7 +60,7 @@ button {
     right: 20%;
     cursor: pointer;
     font-weight: 400;
-    transition: opacity 1s ease-in-out, visibility 0s linear 1s; /* Añadir transición suave para la opacidad */
+    transition: opacity 1s ease-in-out, visibility 0s linear 1s; 
     padding: 25px 45px;
     border-radius: 200px;
     background: #1d7bff;
@@ -70,14 +70,14 @@ button {
     font-size: 40px;
     color: white;
     z-index: 2;
-    opacity: 0;  /* El botón es invisible inicialmente */
-    visibility: hidden;  /* También aseguramos que no sea visible */
+    opacity: 0;  
+    visibility: hidden; 
 }
 
 button.visible {
     opacity: 0.9;  /* Cambia la opacidad a 1 para hacerlo visible */
-    visibility: visible;  /* Hacerlo visible */
-    transition: opacity 1s ease-in-out;  /* La transición solo afecta a la opacidad cuando se hace visible */
+    visibility: visible;  
+    transition: opacity 1s ease-in-out;  
 }
 
 button:hover {
