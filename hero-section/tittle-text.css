@@ -1,6 +1,6 @@
 
 #text-container {
-    display: inline; /* Cambiamos a inline para que los hijos fluyan como texto */
+    display: inline; 
     max-width: 90vw;
     width: 100%;
     position: relative;
@@ -9,7 +9,7 @@
     margin-bottom: 0px;
     
     border-radius: 40px;
-    white-space: normal; /* Permite saltos de línea */
+    white-space: normal; 
 }
 
 #typing {
@@ -17,14 +17,14 @@
     font-weight: 400;
     font-size: 70px;
     overflow: hidden;
-    white-space: normal; /* Permite saltos de línea */
+    white-space: normal; 
     transition: opacity 0.3s ease-in-out;
     position: relative;
     left: 0;
     transform: translateX(0);
     margin-left: 0;
-    word-wrap: break-word; /* Asegura que las palabras largas también se ajusten */
-    display: inline; /* Hace que el texto fluya correctamente */
+    word-wrap: break-word; 
+    display: inline; 
     background-color: white;
 }
 
@@ -52,8 +52,8 @@
     font-size: 70px;
     animation: blink 1s linear infinite;
     margin-left: 0px;
-    display: inline; /* Hace que el cursor fluya con el texto */
-    vertical-align: bottom; /* Alinea el cursor con la última línea de #typing */
+    display: inline; 
+    vertical-align: bottom; 
     background-color: white;
 }
 
