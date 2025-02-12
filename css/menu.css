@@ -85,7 +85,7 @@
 }
 
 .toggle.active span:nth-child(3) {
-    transform: translateX(50px); /* Desaparecer más rápido */
+    transform: translateX(50px); 
 }
 
 @media (max-width: 1200px) {
