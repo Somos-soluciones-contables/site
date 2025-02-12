@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif; /* Aplicar la fuente Open Sans */
+    font-family: 'Open Sans', sans-serif; 
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -17,11 +17,11 @@ body {
 }
 
 * {
-    -webkit-tap-highlight-color: transparent !important; /* Elimina el resaltado celeste */
+    -webkit-tap-highlight-color: transparent !important; 
 }
 
 *:focus-visible {
-    outline:  transparent !important; /* Estilo personalizado para teclado */
+    outline:  transparent !important; 
 }
 
 h1, h2 {
