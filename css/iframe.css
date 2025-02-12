@@ -1,34 +1,34 @@
 #responsive-iframe {
     width: 100%;
-    height: 600px; /* Altura por defecto */
+    height: 600px; 
   }
 
   #responsive-iframe2 {
     width: 100%;
-    height: 850px; /* Altura por defecto */
+    height: 850px;
   }
   
   @media (max-width: 1200px) {
     #responsive-iframe {
-      height: 500px; /* Altura para pantallas medianas */
+      height: 500px; 
     }
   }
   
   @media (max-width: 700px) {
     #responsive-iframe {
-      height: 900px; /* Altura para pantallas medianas */
+      height: 900px; 
     }
   }  
 
   @media (max-width: 600px) {
     #responsive-iframe2 {
-      height: 750px; /* Altura para pantallas medianas */
+      height: 750px; 
     }
   }  
 
 
   @media (max-width: 400px) {
     #responsive-iframe2 {
-      height: 550px; /* Altura para pantallas medianas */
+      height: 550px; 
     }
   }  
