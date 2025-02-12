@@ -356,7 +356,6 @@
 </body>
 <script>
     window.addEventListener('message', function(event) {
-      // Verificar que el mensaje sea válido (opcional, si solo esperas este mensaje)
       if (event.data === 'scrollToSection1') {
         document.querySelector('#section1').scrollIntoView({ behavior: 'smooth' });
       }
